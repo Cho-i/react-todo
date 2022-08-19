@@ -1,0 +1,122 @@
+{
+    "sourceFile": "src/components/TodoListItem.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1660893980706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660894071030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,4 @@\n-import React from \"react\";\n\\ No newline at end of file\n+import React from \"react\";\n+\n+function TodoListItem() {\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660894088116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n import React from \"react\";\n \n function TodoListItem() {\n-}\n\\ No newline at end of file\n+}\n+\n+expect default TodoListItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660894100211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,5 @@\n \n function TodoListItem() {\n }\n \n-expect default TodoListItem;\n\\ No newline at end of file\n+export default TodoListItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660894120789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from \"react\";\n \n function TodoListItem() {\n+    return\n }\n \n export default TodoListItem;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660894150461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n-import React from \"react\";\n+import React from 'react';\n \n function TodoListItem() {\n-    return\n+  return (\n+  \n\\ No newline at end of file\n+  );\n }\n \n-export default TodoListItem;\n+export default TodoListItem;\n"
+                },
+                {
+                    "date": 1660894265347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,18 @@\n import React from 'react';\n \n function TodoListItem() {\n   return (\n-  \n+    <li key={i}>\n+      <input type=\"checkbox\" id={i} />\n+      <label htmlFor={i}>{a}</label>\n+      <p>{date[i]}</p>\n\\ No newline at end of file\n+      <button onClick={(e)=>{\n+        let copy = [...todo]\n+        copy.splice(i,1)\n+        setTodo(copy)\n+      }}>삭제</button>\n+    </li>\n   );\n }\n \n-export default TodoListItem;\n+export default TodoListItem;\n"
+                },
+                {
+                    "date": 1660894296642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,16 @@\n import React from 'react';\n \n function TodoListItem() {\n   return (\n-    <li key={i}>\n-      <input type=\"checkbox\" id={i} />\n-      <label htmlFor={i}>{a}</label>\n-      <p>{date[i]}</p>\n+    <li>\n+      <input type=\"checkbox\"/>\n+      <label htmlFor=\"\"></label>\n+      <p></p>\n       <button onClick={(e)=>{\n-        let copy = [...todo]\n-        copy.splice(i,1)\n-        setTodo(copy)\n+\n       }}>삭제</button>\n\\ No newline at end of file\n     </li>\n   );\n }\n \n-export default TodoListItem;\n+export default TodoListItem;\n"
+                },
+                {
+                    "date": 1660895082664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React from 'react';\n \n-function TodoListItem() {\n+function TodoListItem({todo}) {\n   return (\n     <li>\n       <input type=\"checkbox\"/>\n       <label htmlFor=\"\"></label>\n@@ -12,5 +12,5 @@\n     </li>\n   );\n }\n \n-export default TodoListItem;\n\\ No newline at end of file\n+export default TodoListItem;\n"
+                },
+                {
+                    "date": 1660895194349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from 'react';\n \n function TodoListItem({todo}) {\n+  const { text, date, checked } = todo;\n   return (\n     <li>\n       <input type=\"checkbox\"/>\n       <label htmlFor=\"\"></label>\n"
+                },
+                {
+                    "date": 1660895218696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n   const { text, date, checked } = todo;\n   return (\n     <li>\n       <input type=\"checkbox\"/>\n-      <label htmlFor=\"\"></label>\n-      <p></p>\n+      <label htmlFor=\"\">{text}</label>\n+      <p>{date}</p>\n       <button onClick={(e)=>{\n \n       }}>삭제</button>\n     </li>\n"
+                },
+                {
+                    "date": 1660896643642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import React from 'react';\n \n-function TodoListItem({todo}) {\n-  const { text, date, checked } = todo;\n+function TodoListItem(props) {\n+  //const { text, date, checked } = todo;\n   return (\n     <li>\n       <input type=\"checkbox\"/>\n-      <label htmlFor=\"\">{text}</label>\n-      <p>{date}</p>\n+      <label htmlFor=\"\">{props.todos.text}</label>\n+      <p>{props.todos.date}</p>\n       <button onClick={(e)=>{\n \n       }}>삭제</button>\n     </li>\n"
+                },
+                {
+                    "date": 1660897033045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n   //const { text, date, checked } = todo;\n   return (\n     <li>\n       <input type=\"checkbox\"/>\n-      <label htmlFor=\"\">{props.todos.text}</label>\n-      <p>{props.todos.date}</p>\n+      <label htmlFor=\"\">{props.todo.text}</label>\n+      <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n \n       }}>삭제</button>\n     </li>\n"
+                },
+                {
+                    "date": 1660897132692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react';\n \n function TodoListItem(props) {\n-  //const { text, date, checked } = todo;\n+  \n   return (\n     <li>\n       <input type=\"checkbox\"/>\n       <label htmlFor=\"\">{props.todo.text}</label>\n"
+                },
+                {
+                    "date": 1660897597120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n   \n   return (\n     <li>\n       <input type=\"checkbox\"/>\n-      <label htmlFor=\"\">{props.todo.text}</label>\n-      <p>{props.todo.date}</p>\n+      <label htmlFor=\"\">{props.todos.text}</label>\n+      <p>{props.todos.date}</p>\n       <button onClick={(e)=>{\n \n       }}>삭제</button>\n     </li>\n"
+                },
+                {
+                    "date": 1660897963178,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n   \n   return (\n     <li>\n       <input type=\"checkbox\"/>\n-      <label htmlFor=\"\">{props.todos.text}</label>\n-      <p>{props.todos.date}</p>\n+      <label htmlFor=\"\">{props.todo.text}</label>\n+      <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n \n       }}>삭제</button>\n     </li>\n"
+                },
+                {
+                    "date": 1660899013002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n function TodoListItem(props) {\n   \n   return (\n     <li>\n-      <input type=\"checkbox\"/>\n-      <label htmlFor=\"\">{props.todo.text}</label>\n+      <input type=\"checkbox\" id={props.todo.id}/>\n+      <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n \n       }}>삭제</button>\n"
+                },
+                {
+                    "date": 1660900090838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,13 @@\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n \n       }}>삭제</button>\n+      <button onClick={(e)=>{\n+        // let copy = [...props.todos]\n+        // copy.splice({props.todos.id},1)\n+        // props.setTodos(copy)\n+      }}>삭제</button>\n     </li>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660900215262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,15 +6,15 @@\n     <li>\n       <input type=\"checkbox\" id={props.todo.id}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n-      <button onClick={(e)=>{\n+      {/* <button onClick={(e)=>{\n \n-      }}>삭제</button>\n+      }}>삭제</button> */}\n       <button onClick={(e)=>{\n-        // let copy = [...props.todos]\n-        // copy.splice({props.todos.id},1)\n-        // props.setTodos(copy)\n+        let copy = [...props.todos]\n+        copy.splice({props.todos.id},1)\n+        props.setTodos(copy)\n       }}>삭제</button>\n     </li>\n   );\n }\n"
+                },
+                {
+                    "date": 1660900230222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \n       }}>삭제</button> */}\n       <button onClick={(e)=>{\n         let copy = [...props.todos]\n-        copy.splice({props.todos.id},1)\n+        //copy.splice({props.todos.id},1)\n         props.setTodos(copy)\n       }}>삭제</button>\n     </li>\n   );\n"
+                },
+                {
+                    "date": 1660900335093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,12 @@\n       {/* <button onClick={(e)=>{\n \n       }}>삭제</button> */}\n       <button onClick={(e)=>{\n-        let copy = [...props.todos]\n+        //let copy = [...props.todos]\n         //copy.splice({props.todos.id},1)\n-        props.setTodos(copy)\n+        //props.setTodos(copy)\n+        console.log({props.todos.id})\n       }}>삭제</button>\n     </li>\n   );\n }\n"
+                },
+                {
+                    "date": 1660900350333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <button onClick={(e)=>{\n         //let copy = [...props.todos]\n         //copy.splice({props.todos.id},1)\n         //props.setTodos(copy)\n-        console.log({props.todos.id})\n+        console.log(props.todos.id)\n       }}>삭제</button>\n     </li>\n   );\n }\n"
+                },
+                {
+                    "date": 1660900430410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <button onClick={(e)=>{\n         //let copy = [...props.todos]\n         //copy.splice({props.todos.id},1)\n         //props.setTodos(copy)\n-        console.log(props.todos.id)\n+        console.log(this)\n       }}>삭제</button>\n     </li>\n   );\n }\n"
+                },
+                {
+                    "date": 1660900524315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n       <button onClick={(e)=>{\n         //let copy = [...props.todos]\n         //copy.splice({props.todos.id},1)\n         //props.setTodos(copy)\n-        console.log(this)\n+        console.log(props.i)\n       }}>삭제</button>\n     </li>\n   );\n }\n"
+                },
+                {
+                    "date": 1660900579095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,12 @@\n       {/* <button onClick={(e)=>{\n \n       }}>삭제</button> */}\n       <button onClick={(e)=>{\n-        //let copy = [...props.todos]\n-        //copy.splice({props.todos.id},1)\n-        //props.setTodos(copy)\n-        console.log(props.i)\n+        let copy = [...props.todos]\n+        copy.splice(props.i,1)\n+        props.setTodos(copy)\n+        //console.log(props.i)\n       }}>삭제</button>\n     </li>\n   );\n }\n"
+                },
+                {
+                    "date": 1660900697947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,16 +6,12 @@\n     <li>\n       <input type=\"checkbox\" id={props.todo.id}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n-      {/* <button onClick={(e)=>{\n-\n-      }}>삭제</button> */}\n       <button onClick={(e)=>{\n         let copy = [...props.todos]\n         copy.splice(props.i,1)\n         props.setTodos(copy)\n-        //console.log(props.i)\n       }}>삭제</button>\n     </li>\n   );\n }\n"
+                },
+                {
+                    "date": 1660900767701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import React from 'react';\n \n function TodoListItem(props) {\n-  \n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n"
+                }
+            ],
+            "date": 1660893980706,
+            "name": "Commit-0",
+            "content": "import React from \"react\";"
+        }
+    ]
+}

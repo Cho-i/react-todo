@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/TodoHeader.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1660905242483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660905301762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,9 @@\n import React from 'react';\n-import TodoListItem from './TodoListItem';\n \n-function TodoList(props) {\n+function TodoHeader({children}) {\n   return (\n-    <div className=\"list-box\">\n-      <ul>\n-        {\n-          props.todos.map((todo, i) => (\n-            <TodoListItem todos={props.todos} setTodos={props.setTodos} todo={todo} key={i} i={i} />\n-          ))\n-        }\n-      </ul>\n-    </div>\n+    <header><h1>{children}</h1></header>\n   );\n }\n \n-export default TodoList;\n+export default TodoHeader;\n"
+                }
+            ],
+            "date": 1660905242483,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport TodoListItem from './TodoListItem';\n\nfunction TodoList(props) {\n  return (\n    <div className=\"list-box\">\n      <ul>\n        {\n          props.todos.map((todo, i) => (\n            <TodoListItem todos={props.todos} setTodos={props.setTodos} todo={todo} key={i} i={i} />\n          ))\n        }\n      </ul>\n    </div>\n  );\n}\n\nexport default TodoList;\n"
+        }
+    ]
+}

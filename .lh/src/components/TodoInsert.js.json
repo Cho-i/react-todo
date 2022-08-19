@@ -1,0 +1,122 @@
+{
+    "sourceFile": "src/components/TodoInsert.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1660895360708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660895386349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,11 @@\n import React from 'react';\n-import TodoListItem from './TodoListItem';\n \n-function TodoList({ todos }) {\n+function TodoInsert() {\n   return (\n     <div className=\"list-box\">\n-      <ul>\n-        {todos.map((todo) => (\n-          <TodoListItem todo={todo} key={todo.id} />\n-        ))}\n-      </ul>\n+      \n     </div>\n   );\n }\n \n-export default TodoList;\n+export default TodoInsert;\n"
+                },
+                {
+                    "date": 1660895554670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,13 @@\n-import React from 'react';\n+import { useState } from 'react';\n \n function TodoInsert() {\n+  let [value, setValue] = useState('');\n   return (\n-    <div className=\"list-box\">\n-      \n+    <div className=\"input-box\">\n+      <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={value} onChange={(e)=>{\n+        setValue(e.target.value)\n+      }} />\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660895573884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n     <div className=\"input-box\">\n       <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={value} onChange={(e)=>{\n         setValue(e.target.value)\n       }} />\n+      <button>추가</button>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660900771860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { useState } from 'react';\n \n-function TodoInsert() {\n-  let [value, setValue] = useState('');\n+function TodoInsert(props) {\n+  const [value, setValue] = useState('');\n   return (\n     <div className=\"input-box\">\n       <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={value} onChange={(e)=>{\n         setValue(e.target.value)\n"
+                },
+                {
+                    "date": 1660900888947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,39 @@\n       <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={value} onChange={(e)=>{\n         setValue(e.target.value)\n       }} />\n       <button>추가</button>\n+\n+      {/* <button onClick={(e)=>{\n+          let today = new Date()\n+          let year = today.getFullYear()\n+          let month = ('0' + (today.getMonth() + 1)).slice(-2)\n+          let day = ('0' + today.getDate()).slice(-2)\n+          let dateString = year + '-' + month  + '-' + day\n+\n+          let dateCopy = [...date]\n+          dateCopy.unshift(dateString)\n+          //setDate(dateCopy)\n+\n+          let likeCopy = [...따봉]\n+          likeCopy.unshift(0)\n+          //따봉변경(likeCopy)\n+\n+          let newCopy = [...글제목]\n+          newCopy.unshift(입력값)\n+          //글제목변경(newCopy)\n+\n+          function add(){\n+            setDate(dateCopy)\n+            따봉변경(likeCopy)\n+            글제목변경(newCopy)\n+            입력값변경('')\n+          }\n+\n+          입력값 !== '' ? add() : alert('내용을 입력해 주세요!')\n+          \n+        }}>글발행</button>         */}\n+\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660900907844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n     <div className=\"input-box\">\n       <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={value} onChange={(e)=>{\n         setValue(e.target.value)\n       }} />\n-      <button>추가</button>\n+      <button onClick={(e)=>{\n+      \n+      }}>추가</button>\n \n       {/* <button onClick={(e)=>{\n           let today = new Date()\n           let year = today.getFullYear()\n"
+                },
+                {
+                    "date": 1660901049396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,19 @@\n       <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={value} onChange={(e)=>{\n         setValue(e.target.value)\n       }} />\n       <button onClick={(e)=>{\n-      \n+        let today = new Date()\n+        let year = today.getFullYear()\n+        let month = ('0' + (today.getMonth() + 1)).slice(-2)\n+        let day = ('0' + today.getDate()).slice(-2)\n+        let dateString = year + '-' + month  + '-' + day\n+\n+        let copy = [...props.todos]\n+        copy.unshift(value)\n+\n+        \n+\n       }}>추가</button>\n \n       {/* <button onClick={(e)=>{\n           let today = new Date()\n"
+                },
+                {
+                    "date": 1660901121677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,17 @@\n \n         let copy = [...props.todos]\n         copy.unshift(value)\n \n-        \n+        function add(){\n+          //setDate(dateCopy)\n+          //따봉변경(likeCopy)\n+          props.setTodos(copy)\n+          setValue('')\n+        }\n \n+        value !== '' ? add() : alert('내용을 입력해 주세요!')\n+\n       }}>추가</button>\n \n       {/* <button onClick={(e)=>{\n           let today = new Date()\n"
+                },
+                {
+                    "date": 1660901163553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,15 +13,15 @@\n         let month = ('0' + (today.getMonth() + 1)).slice(-2)\n         let day = ('0' + today.getDate()).slice(-2)\n         let dateString = year + '-' + month  + '-' + day\n \n-        let copy = [...props.todos]\n-        copy.unshift(value)\n+        let textCopy = [...props.todos.text]\n+        textCopy.unshift(value)\n \n         function add(){\n           //setDate(dateCopy)\n           //따봉변경(likeCopy)\n-          props.setTodos(copy)\n+          props.setTodos(textCopy)\n           setValue('')\n         }\n \n         value !== '' ? add() : alert('내용을 입력해 주세요!')\n"
+                },
+                {
+                    "date": 1660901418607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,11 @@\n \n         function add(){\n           //setDate(dateCopy)\n           //따봉변경(likeCopy)\n-          props.setTodos(textCopy)\n-          setValue('')\n+          //props.setTodos(textCopy)\n+          //setValue('')\n+          console.log(props.todos)\n         }\n \n         value !== '' ? add() : alert('내용을 입력해 주세요!')\n \n"
+                },
+                {
+                    "date": 1660901435168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,10 @@\n         let month = ('0' + (today.getMonth() + 1)).slice(-2)\n         let day = ('0' + today.getDate()).slice(-2)\n         let dateString = year + '-' + month  + '-' + day\n \n-        let textCopy = [...props.todos.text]\n-        textCopy.unshift(value)\n+        //let textCopy = [...props.todos.text]\n+        //textCopy.unshift(value)\n \n         function add(){\n           //setDate(dateCopy)\n           //따봉변경(likeCopy)\n"
+                },
+                {
+                    "date": 1660901446156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           //setValue('')\n           console.log(props.todos)\n         }\n \n-        value !== '' ? add() : alert('내용을 입력해 주세요!')\n+        //value !== '' ? add() : alert('내용을 입력해 주세요!')\n \n       }}>추가</button>\n \n       {/* <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1660901451924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,10 @@\n           //setValue('')\n           console.log(props.todos)\n         }\n \n+        console.log(props.todos)\n+\n         //value !== '' ? add() : alert('내용을 입력해 주세요!')\n \n       }}>추가</button>\n \n"
+                },
+                {
+                    "date": 1660901488697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           //setValue('')\n           console.log(props.todos)\n         }\n \n-        console.log(props.todos)\n+        console.log(props.todos.text)\n \n         //value !== '' ? add() : alert('내용을 입력해 주세요!')\n \n       }}>추가</button>\n"
+                },
+                {
+                    "date": 1660901498886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n           //setValue('')\n           console.log(props.todos)\n         }\n \n-        console.log(props.todos.text)\n+        console.log(props.todos[1].text)\n \n         //value !== '' ? add() : alert('내용을 입력해 주세요!')\n \n       }}>추가</button>\n"
+                },
+                {
+                    "date": 1660901554013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,12 +21,12 @@\n           //setDate(dateCopy)\n           //따봉변경(likeCopy)\n           //props.setTodos(textCopy)\n           //setValue('')\n-          console.log(props.todos)\n+          //console.log(props.todos)\n         }\n \n-        console.log(props.todos[1].text)\n+        //console.log(props.todos[1].text)\n \n         //value !== '' ? add() : alert('내용을 입력해 주세요!')\n \n       }}>추가</button>\n"
+                },
+                {
+                    "date": 1660901573805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,11 @@\n         let month = ('0' + (today.getMonth() + 1)).slice(-2)\n         let day = ('0' + today.getDate()).slice(-2)\n         let dateString = year + '-' + month  + '-' + day\n \n-        //let textCopy = [...props.todos.text]\n-        //textCopy.unshift(value)\n+        let textCopy = [...props.todos]\n+        textCopy.unshift(value)\n+        props.setTodos(textCopy)\n \n         function add(){\n           //setDate(dateCopy)\n           //따봉변경(likeCopy)\n"
+                },
+                {
+                    "date": 1660901871620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n       <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={value} onChange={(e)=>{\n         setValue(e.target.value)\n       }} />\n       <button onClick={(e)=>{\n-        let today = new Date()\n-        let year = today.getFullYear()\n-        let month = ('0' + (today.getMonth() + 1)).slice(-2)\n-        let day = ('0' + today.getDate()).slice(-2)\n-        let dateString = year + '-' + month  + '-' + day\n+        // let today = new Date()\n+        // let year = today.getFullYear()\n+        // let month = ('0' + (today.getMonth() + 1)).slice(-2)\n+        // let day = ('0' + today.getDate()).slice(-2)\n+        // let dateString = year + '-' + month  + '-' + day\n \n         let textCopy = [...props.todos]\n         textCopy.unshift(value)\n         props.setTodos(textCopy)\n"
+                },
+                {
+                    "date": 1660902689370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,12 +13,25 @@\n         // let month = ('0' + (today.getMonth() + 1)).slice(-2)\n         // let day = ('0' + today.getDate()).slice(-2)\n         // let dateString = year + '-' + month  + '-' + day\n \n-        let textCopy = [...props.todos]\n-        textCopy.unshift(value)\n-        props.setTodos(textCopy)\n+        // let textCopy = [...props.todos]\n+        // textCopy.unshift(value)\n+        // props.setTodos(textCopy)\n \n+        const todo = {\n+          id: 1,\n+          text: '리액트의 기초 알아보기',\n+          date: '2022-07-10',\n+          checked: true,\n+        }\n+\n+        const copy = [...props.todos]\n+        copy.unshift(todo)\n+        props.setTodos(copy)\n+\n+\n+\n         function add(){\n           //setDate(dateCopy)\n           //따봉변경(likeCopy)\n           //props.setTodos(textCopy)\n"
+                },
+                {
+                    "date": 1660902725068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n         // props.setTodos(textCopy)\n \n         const todo = {\n           id: 1,\n-          text: '리액트의 기초 알아보기',\n+          text: value,\n           date: '2022-07-10',\n-          checked: true,\n+          checked: false,\n         }\n \n         const copy = [...props.todos]\n         copy.unshift(todo)\n"
+                },
+                {
+                    "date": 1660902845786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,22 +7,18 @@\n       <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={value} onChange={(e)=>{\n         setValue(e.target.value)\n       }} />\n       <button onClick={(e)=>{\n-        // let today = new Date()\n-        // let year = today.getFullYear()\n-        // let month = ('0' + (today.getMonth() + 1)).slice(-2)\n-        // let day = ('0' + today.getDate()).slice(-2)\n-        // let dateString = year + '-' + month  + '-' + day\n+        const today = new Date()\n+        const year = today.getFullYear()\n+        const month = ('0' + (today.getMonth() + 1)).slice(-2)\n+        const day = ('0' + today.getDate()).slice(-2)\n+        const dateString = year + '-' + month  + '-' + day\n \n-        // let textCopy = [...props.todos]\n-        // textCopy.unshift(value)\n-        // props.setTodos(textCopy)\n-\n         const todo = {\n           id: 1,\n           text: value,\n-          date: '2022-07-10',\n+          date: dateString,\n           checked: false,\n         }\n \n         const copy = [...props.todos]\n"
+                },
+                {
+                    "date": 1660903909347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n           checked: false,\n         }\n \n         const copy = [...props.todos]\n-        copy.unshift(todo)\n+        copy.push(todo)\n         props.setTodos(copy)\n \n \n \n"
+                },
+                {
+                    "date": 1660904176992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import { useState } from 'react';\n+import React, { useRef } from 'react';\n \n function TodoInsert(props) {\n   const [value, setValue] = useState('');\n+  const nextId = useRef(4);\n   return (\n     <div className=\"input-box\">\n       <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={value} onChange={(e)=>{\n         setValue(e.target.value)\n@@ -14,9 +16,9 @@\n         const day = ('0' + today.getDate()).slice(-2)\n         const dateString = year + '-' + month  + '-' + day\n \n         const todo = {\n-          id: 1,\n+          id: nextId.current ++,\n           text: value,\n           date: dateString,\n           checked: false,\n         }\n"
+                },
+                {
+                    "date": 1660904405468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,39 +41,8 @@\n \n         //value !== '' ? add() : alert('내용을 입력해 주세요!')\n \n       }}>추가</button>\n-\n-      {/* <button onClick={(e)=>{\n-          let today = new Date()\n-          let year = today.getFullYear()\n-          let month = ('0' + (today.getMonth() + 1)).slice(-2)\n-          let day = ('0' + today.getDate()).slice(-2)\n-          let dateString = year + '-' + month  + '-' + day\n-\n-          let dateCopy = [...date]\n-          dateCopy.unshift(dateString)\n-          //setDate(dateCopy)\n-\n-          let likeCopy = [...따봉]\n-          likeCopy.unshift(0)\n-          //따봉변경(likeCopy)\n-\n-          let newCopy = [...글제목]\n-          newCopy.unshift(입력값)\n-          //글제목변경(newCopy)\n-\n-          function add(){\n-            setDate(dateCopy)\n-            따봉변경(likeCopy)\n-            글제목변경(newCopy)\n-            입력값변경('')\n-          }\n-\n-          입력값 !== '' ? add() : alert('내용을 입력해 주세요!')\n-          \n-        }}>글발행</button>         */}\n-\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660904435711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n         }\n \n         const copy = [...props.todos]\n         copy.push(todo)\n-        props.setTodos(copy)\n+        //props.setTodos(copy)\n \n \n \n         function add(){\n@@ -38,9 +38,9 @@\n         }\n \n         //console.log(props.todos[1].text)\n \n-        //value !== '' ? add() : alert('내용을 입력해 주세요!')\n+        value !== '' ? props.setTodos(copy) : alert('내용을 입력해 주세요!')\n \n       }}>추가</button>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1660904467002,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,24 +24,16 @@\n         }\n \n         const copy = [...props.todos]\n         copy.push(todo)\n-        //props.setTodos(copy)\n \n-\n-\n         function add(){\n-          //setDate(dateCopy)\n-          //따봉변경(likeCopy)\n-          //props.setTodos(textCopy)\n-          //setValue('')\n-          //console.log(props.todos)\n+          props.setTodos(copy)\n+          setValue('')\n         }\n \n-        //console.log(props.todos[1].text)\n+        value !== '' ? add() : alert('내용을 입력해 주세요!')\n \n-        value !== '' ? props.setTodos(copy) : alert('내용을 입력해 주세요!')\n-\n       }}>추가</button>\n     </div>\n   );\n }\n"
+                }
+            ],
+            "date": 1660895360708,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport TodoListItem from './TodoListItem';\n\nfunction TodoList({ todos }) {\n  return (\n    <div className=\"list-box\">\n      <ul>\n        {todos.map((todo) => (\n          <TodoListItem todo={todo} key={todo.id} />\n        ))}\n      </ul>\n    </div>\n  );\n}\n\nexport default TodoList;\n"
+        }
+    ]
+}

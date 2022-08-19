@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/todos.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1660896295317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660896364981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-let todos = [\n+let [todos, setTodos] = [\n   {\n     id : 0,\n     title : \"White and Black\",\n     content : \"Born in France\",\n"
+                },
+                {
+                    "date": 1660896377188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-let [todos, setTodos] = [\n+let todos = [\n   {\n     id : 0,\n     title : \"White and Black\",\n     content : \"Born in France\",\n"
+                },
+                {
+                    "date": 1660896409840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,22 @@\n let todos = [\n   {\n-    id : 0,\n-    title : \"White and Black\",\n-    content : \"Born in France\",\n-    price : 120000\n+    id: 1,\n+    text: '리액트의 기초 알아보기',\n+    date: '2022-07-10',\n+    checked: true,\n   },\n-\n   {\n-    id : 1,\n-    title : \"Red Knit\",\n-    content : \"Born in Seoul\",\n-    price : 110000\n+    id: 2,\n+    text: '컴포넌트 스타일링해 보기',\n+    date: '2022-07-09',\n+    checked: true,\n   },\n-\n   {\n\\ No newline at end of file\n-    id : 2,\n-    title : \"Grey Yordan\",\n-    content : \"Born in the States\",\n-    price : 130000\n-  }\n-] \n+    id: 3,\n+    text: '일정 관리 앱 만들어 보기',\n+    date: '2022-07-08',\n+    checked: false,\n+  },\n+];\n \n-export default todos;\n+export default todos;\n"
+                },
+                {
+                    "date": 1660899635602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-let todos = [\n+let [todos,setTodos] = [\n   {\n     id: 1,\n     text: '리액트의 기초 알아보기',\n     date: '2022-07-10',\n@@ -18,5 +18,5 @@\n     checked: false,\n   },\n ];\n \n-export default todos;\n\\ No newline at end of file\n+export default todos;\n"
+                },
+                {
+                    "date": 1660899844572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-let [todos,setTodos] = [\n+let todos = [\n   {\n     id: 1,\n     text: '리액트의 기초 알아보기',\n     date: '2022-07-10',\n"
+                },
+                {
+                    "date": 1660902734015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,15 @@\n   {\n     id: 1,\n     text: '리액트의 기초 알아보기',\n     date: '2022-07-10',\n-    checked: true,\n+    checked: false,\n   },\n   {\n     id: 2,\n     text: '컴포넌트 스타일링해 보기',\n     date: '2022-07-09',\n-    checked: true,\n+    checked: false,\n   },\n   {\n     id: 3,\n     text: '일정 관리 앱 만들어 보기',\n"
+                }
+            ],
+            "date": 1660896295317,
+            "name": "Commit-0",
+            "content": "let todos = [\n  {\n    id : 0,\n    title : \"White and Black\",\n    content : \"Born in France\",\n    price : 120000\n  },\n\n  {\n    id : 1,\n    title : \"Red Knit\",\n    content : \"Born in Seoul\",\n    price : 110000\n  },\n\n  {\n    id : 2,\n    title : \"Grey Yordan\",\n    content : \"Born in the States\",\n    price : 130000\n  }\n] \n\nexport default todos;"
+        }
+    ]
+}

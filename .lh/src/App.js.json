@@ -1,0 +1,310 @@
+{
+    "sourceFile": "src/App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 73,
+            "patches": [
+                {
+                    "date": 1660886286919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660886848732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import './components/TodoTemplate';\n import './App.css';\n \n function App() {\n   return (\n"
+                },
+                {
+                    "date": 1660886872445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,6 @@\n     </div>\n   );\n }\n \n+\n export default App;\n"
+                },
+                {
+                    "date": 1660887067704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,10 @@\n-import './components/TodoTemplate';\n+import TodoTemplate from 'TodoTemplate';\n import './App.css';\n \n function App() {\n   return (\n-    <div className=\"App\">\n-    App\n-    </div>\n+    \n   );\n }\n \n-\n export default App;\n"
+                },
+                {
+                    "date": 1660887103815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import TodoTemplate from 'TodoTemplate';\n+import TodoTemplate from './components/TodoTemplate';\n import './App.css';\n \n function App() {\n   return (\n"
+                },
+                {
+                    "date": 1660887112313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n import './App.css';\n \n function App() {\n   return (\n-    \n+    <TodoTemplate>\n+    </TodoTemplate>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1660887166037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \n function App() {\n   return (\n     <TodoTemplate>\n+    \n     </TodoTemplate>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660887189723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n function App() {\n   return (\n     <TodoTemplate>\n-    \n+    To do App!\n     </TodoTemplate>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660888685815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n-import TodoTemplate from './components/TodoTemplate';\n+//import TodoTemplate from './components/TodoTemplate';\n import './App.css';\n \n function App() {\n   return (\n-    <TodoTemplate>\n-    To do App!\n-    </TodoTemplate>\n+    <div className=\"App\">\n+    \n+    </div>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1660888697551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \n function App() {\n   return (\n     <div className=\"App\">\n-    \n+      \n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660889111618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n //import TodoTemplate from './components/TodoTemplate';\n-import './App.css';\n+import './style.scss';\n \n function App() {\n   return (\n     <div className=\"App\">\n-      \n+\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660889136877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import './style.scss';\n \n function App() {\n   return (\n-    <div className=\"App\">\n+    <div className=\"app\">\n \n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1660889182780,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n-//import TodoTemplate from './components/TodoTemplate';\n import './style.scss';\n \n function App() {\n   return (\n-    <div className=\"app\">\n+    <div className=\"App\">\n \n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1660889389458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function App() {\n   return (\n     <div className=\"App\">\n-\n+      \n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660889397447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function App() {\n   return (\n     <div className=\"App\">\n-      \n+      <header></header>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660889432793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n \n function App() {\n   return (\n     <div className=\"App\">\n-      <header></header>\n+      <header>Todo</header>\n+      <div>\n+      </div>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660889497479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,12 @@\n function App() {\n   return (\n     <div className=\"App\">\n       <header>Todo</header>\n+      <div className=\"input-box\">\n+        <input type=\"text\" />\n+        <button></button>\n+      </div>\n       <div>\n       </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1660889580428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n     <div className=\"App\">\n       <header>Todo</header>\n       <div className=\"input-box\">\n         <input type=\"text\" />\n-        <button></button>\n+        <button>추가</button>\n       </div>\n-      <div>\n+      <div className=\"list-box\">\n       </div>\n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1660889590714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,11 @@\n         <input type=\"text\" />\n         <button>추가</button>\n       </div>\n       <div className=\"list-box\">\n+        <ul>\n+          <li></li>\n+        </ul>\n       </div>\n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1660889654301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function App() {\n   return (\n     <div className=\"App\">\n-      <header>Todo</header>\n+      <header><h1>일정관리</h1></header>\n       <div className=\"input-box\">\n         <input type=\"text\" />\n         <button>추가</button>\n       </div>\n"
+                },
+                {
+                    "date": 1660889670621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n function App() {\n   return (\n     <div className=\"App\">\n-      <header><h1>일정관리</h1></header>\n+      <header><h1>Todo List</h1></header>\n       <div className=\"input-box\">\n         <input type=\"text\" />\n         <button>추가</button>\n       </div>\n"
+                },
+                {
+                    "date": 1660889930004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n       <div className=\"input-box\">\n-        <input type=\"text\" />\n+        <input type=\"text\" placeholder=\"할 일을 입력하세요\"/>\n         <button>추가</button>\n       </div>\n       <div className=\"list-box\">\n         <ul>\n"
+                },
+                {
+                    "date": 1660890404916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n         <button>추가</button>\n       </div>\n       <div className=\"list-box\">\n         <ul>\n-          <li></li>\n+          <li>\n+            <label htmlFor=\"check\"><input type=\"checkbox\" /></label>\n+          </li>\n         </ul>\n       </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1660890429784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n       </div>\n       <div className=\"list-box\">\n         <ul>\n           <li>\n-            <label htmlFor=\"check\"><input type=\"checkbox\" /></label>\n+            <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" /></label>\n           </li>\n         </ul>\n       </div>\n     </div>\n"
+                },
+                {
+                    "date": 1660890452446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n       </div>\n       <div className=\"list-box\">\n         <ul>\n           <li>\n-            <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" /></label>\n+            <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />일정1</label>\n           </li>\n         </ul>\n       </div>\n     </div>\n"
+                },
+                {
+                    "date": 1660890467245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n       <div className=\"list-box\">\n         <ul>\n           <li>\n             <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />일정1</label>\n+            <button></button>\n           </li>\n         </ul>\n       </div>\n     </div>\n"
+                },
+                {
+                    "date": 1660890478891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n       <div className=\"list-box\">\n         <ul>\n           <li>\n             <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />일정1</label>\n-            <button></button>\n+            <button>삭제</button>\n           </li>\n         </ul>\n       </div>\n     </div>\n"
+                },
+                {
+                    "date": 1660890873880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,12 @@\n           <li>\n             <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />일정1</label>\n             <button>삭제</button>\n           </li>\n+          <li>\n+            <label htmlFor=\"check2\"><input type=\"checkbox\" id=\"check2\" />일정2</label>\n+            <button>삭제</button>\n+          </li>\n         </ul>\n       </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1660890879774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,12 @@\n           <li>\n             <label htmlFor=\"check2\"><input type=\"checkbox\" id=\"check2\" />일정2</label>\n             <button>삭제</button>\n           </li>\n+          <li>\n+            <label htmlFor=\"check2\"><input type=\"checkbox\" id=\"check2\" />일정2</label>\n+            <button>삭제</button>\n+          </li>\n         </ul>\n       </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1660890889756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             <label htmlFor=\"check2\"><input type=\"checkbox\" id=\"check2\" />일정2</label>\n             <button>삭제</button>\n           </li>\n           <li>\n-            <label htmlFor=\"check2\"><input type=\"checkbox\" id=\"check2\" />일정2</label>\n+            <label htmlFor=\"check3\"><input type=\"checkbox\" id=\"check3\" />일정3</label>\n             <button>삭제</button>\n           </li>\n         </ul>\n       </div>\n"
+                },
+                {
+                    "date": 1660891282344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n import './style.scss';\n+import { useState } from 'react';\n \n function App() {\n+  let [글제목, 글제목변경] = useState(['남자코트 추천','강남 우동맛집','리액트 독학']);\n+\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n       <div className=\"input-box\">\n"
+                },
+                {
+                    "date": 1660891310013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import './style.scss';\n import { useState } from 'react';\n \n function App() {\n-  let [글제목, 글제목변경] = useState(['남자코트 추천','강남 우동맛집','리액트 독학']);\n+  let [todo, setTodo] = useState(['남자코트 추천','강남 우동맛집','리액트 독학']);\n \n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n"
+                },
+                {
+                    "date": 1660891365386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import './style.scss';\n import { useState } from 'react';\n \n function App() {\n-  let [todo, setTodo] = useState(['남자코트 추천','강남 우동맛집','리액트 독학']);\n+  let [todo, setTodo] = useState(['홍대 AM10시 약속','','리액트 독학']);\n \n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n"
+                },
+                {
+                    "date": 1660891385692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import './style.scss';\n import { useState } from 'react';\n \n function App() {\n-  let [todo, setTodo] = useState(['홍대 AM10시 약속','','리액트 독학']);\n+  let [todo, setTodo] = useState(['홍대 AM10시 약속','토요일 영화보기','리액트 공부 우짤꼬']);\n \n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n"
+                },
+                {
+                    "date": 1660891482423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,16 @@\n         <button>추가</button>\n       </div>\n       <div className=\"list-box\">\n         <ul>\n+        {\n+          todo.map(function(a, i){\n+            return(\n+              \n+            )\n+          })\n+        }\n+\n           <li>\n             <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />일정1</label>\n             <button>삭제</button>\n           </li>\n"
+                },
+                {
+                    "date": 1660891519198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n         <ul>\n         {\n           todo.map(function(a, i){\n             return(\n-              \n+              <li key={i}>\n+\n+              </li>\n             )\n           })\n         }\n \n"
+                },
+                {
+                    "date": 1660891536397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n-\n+                <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />일정1</label>\n+                <button>삭제</button>\n               </li>\n             )\n           })\n         }\n"
+                },
+                {
+                    "date": 1660891552645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,21 +22,9 @@\n               </li>\n             )\n           })\n         }\n-\n-          <li>\n-            <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />일정1</label>\n-            <button>삭제</button>\n-          </li>\n-          <li>\n-            <label htmlFor=\"check2\"><input type=\"checkbox\" id=\"check2\" />일정2</label>\n-            <button>삭제</button>\n-          </li>\n-          <li>\n-            <label htmlFor=\"check3\"><input type=\"checkbox\" id=\"check3\" />일정3</label>\n-            <button>삭제</button>\n-          </li>\n+        \n         </ul>\n       </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1660891593513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,15 +16,15 @@\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n-                <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />일정1</label>\n+                <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />{a}</label>\n                 <button>삭제</button>\n               </li>\n             )\n           })\n         }\n-        \n+\n         </ul>\n       </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1660891678639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n-                <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check\" />{a}</label>\n+                <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check+{i}\" />{a}</label>\n                 <button>삭제</button>\n               </li>\n             )\n           })\n"
+                },
+                {
+                    "date": 1660891709026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n-                <label htmlFor=\"check\"><input type=\"checkbox\" id=\"check+{i}\" />{a}</label>\n+                <label htmlFor=\"check\"><input type=\"checkbox\" id=\"'check'+{i}\" />{a}</label>\n                 <button>삭제</button>\n               </li>\n             )\n           })\n"
+                },
+                {
+                    "date": 1660891762346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n-                <label htmlFor=\"check\"><input type=\"checkbox\" id=\"'check'+{i}\" />{a}</label>\n+                <label htmlFor={id}><input type=\"checkbox\" id={id} />{a}</label>\n                 <button>삭제</button>\n               </li>\n             )\n           })\n"
+                },
+                {
+                    "date": 1660891815792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n-                <label htmlFor={id}><input type=\"checkbox\" id={id} />{a}</label>\n+                <label htmlFor={i}><input type=\"checkbox\" id={i} />{a}</label>\n                 <button>삭제</button>\n               </li>\n             )\n           })\n"
+                },
+                {
+                    "date": 1660891843067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n-                <label htmlFor={i}><input type=\"checkbox\" id={i} />{a}</label>\n+                <label htmlFor={i+1}><input type=\"checkbox\" id={i+1} />{a}</label>\n                 <button>삭제</button>\n               </li>\n             )\n           })\n"
+                },
+                {
+                    "date": 1660892025806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n-                <label htmlFor={i+1}><input type=\"checkbox\" id={i+1} />{a}</label>\n+                <label htmlFor={i}><input type=\"checkbox\" id={i} />{a}</label>\n                 <button>삭제</button>\n               </li>\n             )\n           })\n"
+                },
+                {
+                    "date": 1660892224636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n-                <label htmlFor={i}><input type=\"checkbox\" id={i} />{a}</label>\n+                <input type=\"checkbox\" id={i} />\n+                <label htmlFor={i}>{a}</label>\n                 <button>삭제</button>\n               </li>\n             )\n           })\n"
+                },
+                {
+                    "date": 1660892506259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,13 @@\n             return(\n               <li key={i}>\n                 <input type=\"checkbox\" id={i} />\n                 <label htmlFor={i}>{a}</label>\n-                <button>삭제</button>\n+                <button onClick={(e)=>{\n+                  let copy = [...todo]\n+                  copy.splice(i,1)\n+                  setTodo(copy)\n+                }}>삭제</button>\n               </li>\n             )\n           })\n         }\n"
+                },
+                {
+                    "date": 1660892597992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,17 @@\n import { useState } from 'react';\n \n function App() {\n   let [todo, setTodo] = useState(['홍대 AM10시 약속','토요일 영화보기','리액트 공부 우짤꼬']);\n+  let [text, setText] = useState('');\n \n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n       <div className=\"input-box\">\n-        <input type=\"text\" placeholder=\"할 일을 입력하세요\"/>\n+        <input type=\"text\" value={text} onChange={(e)=>{\n+          setText(e.target.value)\n+        }} />\n         <button>추가</button>\n       </div>\n       <div className=\"list-box\">\n         <ul>\n"
+                },
+                {
+                    "date": 1660892645494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,11 @@\n       <div className=\"input-box\">\n         <input type=\"text\" value={text} onChange={(e)=>{\n           setText(e.target.value)\n         }} />\n-        <button>추가</button>\n+        <button onClick={(e)=>{\n+        \n+        }}>추가</button>\n       </div>\n       <div className=\"list-box\">\n         <ul>\n         {\n"
+                },
+                {
+                    "date": 1660892903443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { useState } from 'react';\n \n function App() {\n   let [todo, setTodo] = useState(['홍대 AM10시 약속','토요일 영화보기','리액트 공부 우짤꼬']);\n+  let [date, setDate] = useState(['2022-07-10','2022-07-09','2022-07-08']);\n   let [text, setText] = useState('');\n \n   return (\n     <div className=\"App\">\n@@ -23,8 +24,9 @@\n             return(\n               <li key={i}>\n                 <input type=\"checkbox\" id={i} />\n                 <label htmlFor={i}>{a}</label>\n+                <p>{date[i]}</p>\n                 <button onClick={(e)=>{\n                   let copy = [...todo]\n                   copy.splice(i,1)\n                   setTodo(copy)\n"
+                },
+                {
+                    "date": 1660893012356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,33 @@\n         <input type=\"text\" value={text} onChange={(e)=>{\n           setText(e.target.value)\n         }} />\n         <button onClick={(e)=>{\n+          let today = new Date()\n+          let year = today.getFullYear()\n+          let month = ('0' + (today.getMonth() + 1)).slice(-2)\n+          let day = ('0' + today.getDate()).slice(-2)\n+          let dateString = year + '-' + month  + '-' + day\n+\n+          let dateCopy = [...date]\n+          dateCopy.unshift(dateString)\n+\n+          let newCopy = [...todo]\n+          newCopy.unshift(text)\n+\n+          function add(){\n+            setDate(dateCopy)\n+            setTodo(newCopy)\n+            setText('')\n+          }\n+\n+          text !== '' ? add() : alert('내용을 입력해 주세요!')\n         \n         }}>추가</button>\n       </div>\n       <div className=\"list-box\">\n         <ul>\n+\n         {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n"
+                },
+                {
+                    "date": 1660893045551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n       <div className=\"input-box\">\n-        <input type=\"text\" value={text} onChange={(e)=>{\n+        <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={text} onChange={(e)=>{\n           setText(e.target.value)\n         }} />\n         <button onClick={(e)=>{\n           let today = new Date()\n"
+                },
+                {
+                    "date": 1660894344671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import './style.scss';\n import { useState } from 'react';\n \n function App() {\n-  let [todo, setTodo] = useState(['홍대 AM10시 약속','토요일 영화보기','리액트 공부 우짤꼬']);\n+  //let [todo, setTodo] = useState(['홍대 AM10시 약속','토요일 영화보기','리액트 공부 우짤꼬']);\n   let [date, setDate] = useState(['2022-07-10','2022-07-09','2022-07-08']);\n   let [text, setText] = useState('');\n \n   return (\n@@ -38,9 +38,9 @@\n       </div>\n       <div className=\"list-box\">\n         <ul>\n \n-        {\n+        {/* {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n                 <input type=\"checkbox\" id={i} />\n@@ -53,9 +53,9 @@\n                 }}>삭제</button>\n               </li>\n             )\n           })\n-        }\n+        } */}\n \n         </ul>\n       </div>\n     </div>\n"
+                },
+                {
+                    "date": 1660894379789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,25 +13,25 @@\n         <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={text} onChange={(e)=>{\n           setText(e.target.value)\n         }} />\n         <button onClick={(e)=>{\n-          let today = new Date()\n-          let year = today.getFullYear()\n-          let month = ('0' + (today.getMonth() + 1)).slice(-2)\n-          let day = ('0' + today.getDate()).slice(-2)\n-          let dateString = year + '-' + month  + '-' + day\n+          // let today = new Date()\n+          // let year = today.getFullYear()\n+          // let month = ('0' + (today.getMonth() + 1)).slice(-2)\n+          // let day = ('0' + today.getDate()).slice(-2)\n+          // let dateString = year + '-' + month  + '-' + day\n \n-          let dateCopy = [...date]\n-          dateCopy.unshift(dateString)\n+          // let dateCopy = [...date]\n+          // dateCopy.unshift(dateString)\n \n-          let newCopy = [...todo]\n-          newCopy.unshift(text)\n+          // let newCopy = [...todo]\n+          // newCopy.unshift(text)\n \n-          function add(){\n-            setDate(dateCopy)\n-            setTodo(newCopy)\n-            setText('')\n-          }\n+          // function add(){\n+          //   setDate(dateCopy)\n+          //   setTodo(newCopy)\n+          //   setText('')\n+          // }\n \n           text !== '' ? add() : alert('내용을 입력해 주세요!')\n         \n         }}>추가</button>\n"
+                },
+                {
+                    "date": 1660894385930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n           //   setTodo(newCopy)\n           //   setText('')\n           // }\n \n-          text !== '' ? add() : alert('내용을 입력해 주세요!')\n+          //text !== '' ? add() : alert('내용을 입력해 주세요!')\n         \n         }}>추가</button>\n       </div>\n       <div className=\"list-box\">\n"
+                },
+                {
+                    "date": 1660894440885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,26 @@\n import './style.scss';\n import { useState } from 'react';\n \n function App() {\n+  const [todos, setTodos] = useState([\n+    {\n+      id: 1,\n+      text: '리액트의 기초 알아보기',\n+      checked: true,\n+    },\n+    {\n+      id: 2,\n+      text: '컴포넌트 스타일링해 보기',\n+      checked: true,\n+    },\n+    {\n+      id: 3,\n+      text: '일정 관리 앱 만들어 보기',\n+      checked: false,\n+    },\n+  ]);\n+\n   //let [todo, setTodo] = useState(['홍대 AM10시 약속','토요일 영화보기','리액트 공부 우짤꼬']);\n   let [date, setDate] = useState(['2022-07-10','2022-07-09','2022-07-08']);\n   let [text, setText] = useState('');\n \n"
+                },
+                {
+                    "date": 1660894664453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import './style.scss';\n import { useState } from 'react';\n+import TodoList from './components/TodoList';\n \n function App() {\n   const [todos, setTodos] = useState([\n     {\n"
+                },
+                {
+                    "date": 1660894702689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,8 +54,11 @@\n           //text !== '' ? add() : alert('내용을 입력해 주세요!')\n         \n         }}>추가</button>\n       </div>\n+\n+      <TodoList todos={todos} />\n+\n       <div className=\"list-box\">\n         <ul>\n \n         {/* {\n"
+                },
+                {
+                    "date": 1660894976266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,18 +6,21 @@\n   const [todos, setTodos] = useState([\n     {\n       id: 1,\n       text: '리액트의 기초 알아보기',\n+      date: '2022-07-10',\n       checked: true,\n     },\n     {\n       id: 2,\n       text: '컴포넌트 스타일링해 보기',\n+      date: '2022-07-09',\n       checked: true,\n     },\n     {\n       id: 3,\n       text: '일정 관리 앱 만들어 보기',\n+      date: '2022-07-08',\n       checked: false,\n     },\n   ]);\n \n"
+                },
+                {
+                    "date": 1660895127029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,18 +24,18 @@\n     },\n   ]);\n \n   //let [todo, setTodo] = useState(['홍대 AM10시 약속','토요일 영화보기','리액트 공부 우짤꼬']);\n-  let [date, setDate] = useState(['2022-07-10','2022-07-09','2022-07-08']);\n-  let [text, setText] = useState('');\n+  //let [date, setDate] = useState(['2022-07-10','2022-07-09','2022-07-08']);\n+  //let [text, setText] = useState('');\n \n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n       <div className=\"input-box\">\n-        <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={text} onChange={(e)=>{\n+        {/* <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={text} onChange={(e)=>{\n           setText(e.target.value)\n-        }} />\n+        }} /> */}\n         <button onClick={(e)=>{\n           // let today = new Date()\n           // let year = today.getFullYear()\n           // let month = ('0' + (today.getMonth() + 1)).slice(-2)\n"
+                },
+                {
+                    "date": 1660895588853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,35 +30,35 @@\n \n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n-      <div className=\"input-box\">\n-        {/* <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={text} onChange={(e)=>{\n+      {/* <div className=\"input-box\">\n+        <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={text} onChange={(e)=>{\n           setText(e.target.value)\n-        }} /> */}\n+        }} />\n         <button onClick={(e)=>{\n-          // let today = new Date()\n-          // let year = today.getFullYear()\n-          // let month = ('0' + (today.getMonth() + 1)).slice(-2)\n-          // let day = ('0' + today.getDate()).slice(-2)\n-          // let dateString = year + '-' + month  + '-' + day\n+          let today = new Date()\n+          let year = today.getFullYear()\n+          let month = ('0' + (today.getMonth() + 1)).slice(-2)\n+          let day = ('0' + today.getDate()).slice(-2)\n+          let dateString = year + '-' + month  + '-' + day\n \n-          // let dateCopy = [...date]\n-          // dateCopy.unshift(dateString)\n+          let dateCopy = [...date]\n+          dateCopy.unshift(dateString)\n \n-          // let newCopy = [...todo]\n-          // newCopy.unshift(text)\n+          let newCopy = [...todo]\n+          newCopy.unshift(text)\n \n-          // function add(){\n-          //   setDate(dateCopy)\n-          //   setTodo(newCopy)\n-          //   setText('')\n-          // }\n+          function add(){\n+            setDate(dateCopy)\n+            setTodo(newCopy)\n+            setText('')\n+          }\n \n-          //text !== '' ? add() : alert('내용을 입력해 주세요!')\n+          text !== '' ? add() : alert('내용을 입력해 주세요!')\n         \n         }}>추가</button>\n-      </div>\n+      </div> */}\n \n       <TodoList todos={todos} />\n \n       <div className=\"list-box\">\n"
+                },
+                {
+                    "date": 1660895618716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import './style.scss';\n import { useState } from 'react';\n import TodoList from './components/TodoList';\n+import TodoInsert from './components/TodoInsert';\n \n function App() {\n   const [todos, setTodos] = useState([\n     {\n@@ -58,8 +59,9 @@\n         \n         }}>추가</button>\n       </div> */}\n \n+      <TodoInsert />\n       <TodoList todos={todos} />\n \n       <div className=\"list-box\">\n         <ul>\n"
+                },
+                {
+                    "date": 1660895672800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -62,12 +62,12 @@\n \n       <TodoInsert />\n       <TodoList todos={todos} />\n \n-      <div className=\"list-box\">\n+      {/* <div className=\"list-box\">\n         <ul>\n \n-        {/* {\n+        {\n           todo.map(function(a, i){\n             return(\n               <li key={i}>\n                 <input type=\"checkbox\" id={i} />\n@@ -80,12 +80,12 @@\n                 }}>삭제</button>\n               </li>\n             )\n           })\n-        } */}\n+        }\n \n         </ul>\n-      </div>\n+      </div> */}\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660896303703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,28 +3,28 @@\n import TodoList from './components/TodoList';\n import TodoInsert from './components/TodoInsert';\n \n function App() {\n-  const [todos, setTodos] = useState([\n-    {\n-      id: 1,\n-      text: '리액트의 기초 알아보기',\n-      date: '2022-07-10',\n-      checked: true,\n-    },\n-    {\n-      id: 2,\n-      text: '컴포넌트 스타일링해 보기',\n-      date: '2022-07-09',\n-      checked: true,\n-    },\n-    {\n-      id: 3,\n-      text: '일정 관리 앱 만들어 보기',\n-      date: '2022-07-08',\n-      checked: false,\n-    },\n-  ]);\n+  // const [todos, setTodos] = useState([\n+  //   {\n+  //     id: 1,\n+  //     text: '리액트의 기초 알아보기',\n+  //     date: '2022-07-10',\n+  //     checked: true,\n+  //   },\n+  //   {\n+  //     id: 2,\n+  //     text: '컴포넌트 스타일링해 보기',\n+  //     date: '2022-07-09',\n+  //     checked: true,\n+  //   },\n+  //   {\n+  //     id: 3,\n+  //     text: '일정 관리 앱 만들어 보기',\n+  //     date: '2022-07-08',\n+  //     checked: false,\n+  //   },\n+  // ]);\n \n   //let [todo, setTodo] = useState(['홍대 AM10시 약속','토요일 영화보기','리액트 공부 우짤꼬']);\n   //let [date, setDate] = useState(['2022-07-10','2022-07-09','2022-07-08']);\n   //let [text, setText] = useState('');\n"
+                },
+                {
+                    "date": 1660896348880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import './style.scss';\n import { useState } from 'react';\n import TodoList from './components/TodoList';\n import TodoInsert from './components/TodoInsert';\n+import todos from './todos';\n \n function App() {\n   // const [todos, setTodos] = useState([\n   //   {\n"
+                },
+                {
+                    "date": 1660898902664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,89 +4,13 @@\n import TodoInsert from './components/TodoInsert';\n import todos from './todos';\n \n function App() {\n-  // const [todos, setTodos] = useState([\n-  //   {\n-  //     id: 1,\n-  //     text: '리액트의 기초 알아보기',\n-  //     date: '2022-07-10',\n-  //     checked: true,\n-  //   },\n-  //   {\n-  //     id: 2,\n-  //     text: '컴포넌트 스타일링해 보기',\n-  //     date: '2022-07-09',\n-  //     checked: true,\n-  //   },\n-  //   {\n-  //     id: 3,\n-  //     text: '일정 관리 앱 만들어 보기',\n-  //     date: '2022-07-08',\n-  //     checked: false,\n-  //   },\n-  // ]);\n-\n-  //let [todo, setTodo] = useState(['홍대 AM10시 약속','토요일 영화보기','리액트 공부 우짤꼬']);\n-  //let [date, setDate] = useState(['2022-07-10','2022-07-09','2022-07-08']);\n-  //let [text, setText] = useState('');\n-\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n-      {/* <div className=\"input-box\">\n-        <input type=\"text\" placeholder=\"할 일을 입력하세요.\" value={text} onChange={(e)=>{\n-          setText(e.target.value)\n-        }} />\n-        <button onClick={(e)=>{\n-          let today = new Date()\n-          let year = today.getFullYear()\n-          let month = ('0' + (today.getMonth() + 1)).slice(-2)\n-          let day = ('0' + today.getDate()).slice(-2)\n-          let dateString = year + '-' + month  + '-' + day\n-\n-          let dateCopy = [...date]\n-          dateCopy.unshift(dateString)\n-\n-          let newCopy = [...todo]\n-          newCopy.unshift(text)\n-\n-          function add(){\n-            setDate(dateCopy)\n-            setTodo(newCopy)\n-            setText('')\n-          }\n-\n-          text !== '' ? add() : alert('내용을 입력해 주세요!')\n-        \n-        }}>추가</button>\n-      </div> */}\n-\n       <TodoInsert />\n       <TodoList todos={todos} />\n-\n-      {/* <div className=\"list-box\">\n-        <ul>\n-\n-        {\n-          todo.map(function(a, i){\n-            return(\n-              <li key={i}>\n-                <input type=\"checkbox\" id={i} />\n-                <label htmlFor={i}>{a}</label>\n-                <p>{date[i]}</p>\n-                <button onClick={(e)=>{\n-                  let copy = [...todo]\n-                  copy.splice(i,1)\n-                  setTodo(copy)\n-                }}>삭제</button>\n-              </li>\n-            )\n-          })\n-        }\n-\n-        </ul>\n-      </div> */}\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660899082543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n function App() {\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n+      <TodoList todos={todos} />\n       <TodoInsert />\n-      <TodoList todos={todos} />\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660899885227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import './style.scss';\n import { useState } from 'react';\n import TodoList from './components/TodoList';\n import TodoInsert from './components/TodoInsert';\n-import todos from './todos';\n+import data from './todos';\n \n function App() {\n+  let [todos] = useState(data);\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n       <TodoList todos={todos} />\n"
+                },
+                {
+                    "date": 1660899910712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import TodoInsert from './components/TodoInsert';\n import data from './todos';\n \n function App() {\n-  let [todos] = useState(data);\n+  let [todos, setTodos] = useState(data);\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n       <TodoList todos={todos} />\n"
+                },
+                {
+                    "date": 1660900650052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   let [todos, setTodos] = useState(data);\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n-      <TodoList todos={todos} />\n+      <TodoList todos={todos} setTodos={setTodos} />\n       <TodoInsert />\n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1660900733661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n       <TodoList todos={todos} setTodos={setTodos} />\n-      <TodoInsert />\n+      <TodoInsert todos={todos} setTodos={setTodos} />\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660900760699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import TodoInsert from './components/TodoInsert';\n import data from './todos';\n \n function App() {\n-  let [todos, setTodos] = useState(data);\n+  const [todos, setTodos] = useState(data);\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n       <TodoList todos={todos} setTodos={setTodos} />\n"
+                },
+                {
+                    "date": 1660905337875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import './style.scss';\n import { useState } from 'react';\n+import TodoHeader from './components/TodoHeader';\n import TodoList from './components/TodoList';\n import TodoInsert from './components/TodoInsert';\n import data from './todos';\n \n@@ -8,8 +9,9 @@\n   const [todos, setTodos] = useState(data);\n   return (\n     <div className=\"App\">\n       <header><h1>Todo List</h1></header>\n+      <TodoHeader>Todo List</TodoHeader>\n       <TodoList todos={todos} setTodos={setTodos} />\n       <TodoInsert todos={todos} setTodos={setTodos} />\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1660905345991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n function App() {\n   const [todos, setTodos] = useState(data);\n   return (\n     <div className=\"App\">\n-      <header><h1>Todo List</h1></header>\n       <TodoHeader>Todo List</TodoHeader>\n       <TodoList todos={todos} setTodos={setTodos} />\n       <TodoInsert todos={todos} setTodos={setTodos} />\n     </div>\n"
+                }
+            ],
+            "date": 1660886286919,
+            "name": "Commit-0",
+            "content": "import './App.css';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n    App\n    </div>\n  );\n}\n\nexport default App;\n"
+        }
+    ]
+}

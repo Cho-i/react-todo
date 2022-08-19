@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: rgb(230, 230, 230);
+}
+
+button{
+    padding: 0.5em;
+    font-size: 1em;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.App{
+    margin: 2em;
+    background-color: #fff;
+    border-radius: 2em;
+    overflow: hidden;
+    header{
+        position: sticky;
+        top: 0;
+        width: 100%;
+        padding: 2em 1em;
+        background-color: #000;
+        h1{
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+        }
+    }
+    .input-box{
+        display: flex;
+        padding: 1em 1.5em;
+        border-top: 1px solid #000;
+        input{
+            width: 100%;
+            padding: 0.5em;
+            font-size: 1em;
+            color: #000;
+            background-color: transparent;
+        }
+    }
+    .list-box{
+        padding: 1em;
+        background-color: #fff;
+        ul{
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1em 0.5em;
+                border-bottom: 1px solid #000;
+                &:last-child{
+                    border: none;
+                }
+                input{
+                    margin-right: 0.5em;
+                    width: 1.5em;
+                    height: 1.5em;
+                    &:checked{
+                        + label{
+                            opacity: 0.5;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+                label{
+                    margin-right: auto;
+                    width: 100%;
+                    font-size: 1em;
+                    color: #000;
+                }
+                p{
+                    margin: 0 0.5em 0 auto;
+                    font-size: 0.8em;
+                    color: #000;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

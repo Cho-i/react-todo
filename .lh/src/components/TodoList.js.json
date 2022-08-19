@@ -1,0 +1,146 @@
+{
+    "sourceFile": "src/components/TodoList.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 32,
+            "patches": [
+                {
+                    "date": 1660894477343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660894484292,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+import React from 'react';\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660894545121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,11 @@\n-import React from 'react';\n\\ No newline at end of file\n+import React from 'react';\n+\n+function TodoList() {\n+  return (\n+    <div className=\"list-box\">\n+    \n+    </div>\n+  );\n+}\n+\n+export default TodoList;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660894564164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react';\n+import TodoListItem from './TodoListItem';\n \n function TodoList() {\n   return (\n     <div className=\"list-box\">\n"
+                },
+                {
+                    "date": 1660894576691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n \n function TodoList() {\n   return (\n     <div className=\"list-box\">\n-    \n+        <ul>\n+            \n+        </ul>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1660894622303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,12 @@\n function TodoList() {\n   return (\n     <div className=\"list-box\">\n         <ul>\n-            \n+            {\n+                \n+            }\n+            <TodoListItem></TodoListItem>\n         </ul>\n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1660894725181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import React from 'react';\n import TodoListItem from './TodoListItem';\n \n-function TodoList() {\n+function TodoList({todos}) {\n   return (\n     <div className=\"list-box\">\n         <ul>\n             {\n-                \n+\n             }\n             <TodoListItem></TodoListItem>\n         </ul>\n     </div>\n"
+                },
+                {
+                    "date": 1660894843428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,13 @@\n   return (\n     <div className=\"list-box\">\n         <ul>\n             {\n+                todos.map(todo => (\n+                    <TodoListItem todo={todo} key={todo.id} />\n+                ))\n \n             }\n-            <TodoListItem></TodoListItem>\n         </ul>\n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1660894852790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,16 @@\n import React from 'react';\n import TodoListItem from './TodoListItem';\n \n-function TodoList({todos}) {\n+function TodoList({ todos }) {\n   return (\n     <div className=\"list-box\">\n-        <ul>\n-            {\n-                todos.map(todo => (\n-                    <TodoListItem todo={todo} key={todo.id} />\n-                ))\n-\n-            }\n-        </ul>\n+      <ul>\n+        {todos.map((todo) => (\n+          <TodoListItem todo={todo} key={todo.id} />\n+        ))}\n\\ No newline at end of file\n+      </ul>\n     </div>\n   );\n }\n \n-export default TodoList;\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660896988012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n import React from 'react';\n import TodoListItem from './TodoListItem';\n \n-function TodoList({ todos }) {\n+function TodoList(props) {\n   return (\n     <div className=\"list-box\">\n       <ul>\n-        {todos.map((todo) => (\n+        {props.todos.map((todo) => (\n           <TodoListItem todo={todo} key={todo.id} />\n         ))}\n       </ul>\n     </div>\n   );\n }\n\\ No newline at end of file\n \n-export default TodoList;\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660897449320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,18 @@\n function TodoList(props) {\n   return (\n     <div className=\"list-box\">\n       <ul>\n-        {props.todos.map((todo) => (\n+        {/* {props.todos.map((todo) => (\n           <TodoListItem todo={todo} key={todo.id} />\n-        ))}\n+        ))} */}\n+        {\n+          props.todos.map(()=>{\n+            <TodoListItem />\n+          })\n\\ No newline at end of file\n+        }\n       </ul>\n     </div>\n   );\n }\n \n-export default TodoList;\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660897516261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,14 +8,14 @@\n         {/* {props.todos.map((todo) => (\n           <TodoListItem todo={todo} key={todo.id} />\n         ))} */}\n         {\n-          props.todos.map(()=>{\n-            <TodoListItem />\n+          props.todos.map(function(a, i) {\n+            <TodoListItem key={i} />\n           })\n         }\n       </ul>\n     </div>\n   );\n }\n\\ No newline at end of file\n \n-export default TodoList;\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660897540058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n           <TodoListItem todo={todo} key={todo.id} />\n         ))} */}\n         {\n           props.todos.map(function(a, i) {\n-            <TodoListItem key={i} />\n+            <TodoListItem todos={todos} key={i} />\n           })\n         }\n       </ul>\n     </div>\n   );\n }\n \n\\ No newline at end of file\n-export default TodoList;\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660897586245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n           <TodoListItem todo={todo} key={todo.id} />\n         ))} */}\n         {\n           props.todos.map(function(a, i) {\n-            <TodoListItem todos={todos} key={i} />\n+            <TodoListItem todos={props.todos} key={i} />\n           })\n         }\n       </ul>\n     </div>\n   );\n }\n \n\\ No newline at end of file\n-export default TodoList;\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660897725478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,15 @@\n           <TodoListItem todo={todo} key={todo.id} />\n         ))} */}\n         {\n           props.todos.map(function(a, i) {\n-            <TodoListItem todos={props.todos} key={i} />\n+            return(\n+              <TodoListItem todos={props.todos} key={i} />\n+            )\n           })\n         }\n       </ul>\n     </div>\n   );\n\\ No newline at end of file\n }\n \n-export default TodoList;\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660897893820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,14 +10,14 @@\n         ))} */}\n         {\n           props.todos.map(function(a, i) {\n             return(\n-              <TodoListItem todos={props.todos} key={i} />\n+              <TodoListItem todos={props.todos} key={props.todos.id} />\n             )\n           })\n         }\n       </ul>\n     </div>\n   );\n }\n \n\\ No newline at end of file\n-export default TodoList;\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660897957640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,20 +4,22 @@\n function TodoList(props) {\n   return (\n     <div className=\"list-box\">\n       <ul>\n-        {/* {props.todos.map((todo) => (\n-          <TodoListItem todo={todo} key={todo.id} />\n-        ))} */}\n         {\n-          props.todos.map(function(a, i) {\n-            return(\n-              <TodoListItem todos={props.todos} key={props.todos.id} />\n-            )\n-          })\n+          props.todos.map((todo) => (\n+            <TodoListItem todo={todo} key={todo.id} />\n+          ))\n         }\n+        {\n+          // props.todos.map(function(a, i) {\n+          //   return(\n\\ No newline at end of file\n+          //     <TodoListItem todos={props.todos} key={props.todos.id} />\n+          //   )\n+          // })\n+        }\n       </ul>\n     </div>\n   );\n }\n \n-export default TodoList;\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660898174461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\n     <div className=\"list-box\">\n       <ul>\n         {\n-          props.todos.map((todo) => (\n+          props.todos.map(todo => (\n             <TodoListItem todo={todo} key={todo.id} />\n           ))\n         }\n         {\n@@ -21,5 +21,5 @@\n     </div>\n   );\n }\n \n-export default TodoList;\n\\ No newline at end of file\n+export default TodoList;\n"
+                },
+                {
+                    "date": 1660898564939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n     <div className=\"list-box\">\n       <ul>\n         {\n           props.todos.map(todo => (\n-            <TodoListItem todo={todo} key={todo.id} />\n+            //<TodoListItem todo={todo} key={todo.id} />\n+            console.log(todo)\n           ))\n         }\n         {\n           // props.todos.map(function(a, i) {\n"
+                },
+                {
+                    "date": 1660898592482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n       <ul>\n         {\n           props.todos.map(todo => (\n             //<TodoListItem todo={todo} key={todo.id} />\n-            console.log(todo)\n+            console.log(props.todos)\n           ))\n         }\n         {\n           // props.todos.map(function(a, i) {\n"
+                },
+                {
+                    "date": 1660898613176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n       <ul>\n         {\n           props.todos.map(todo => (\n             //<TodoListItem todo={todo} key={todo.id} />\n-            console.log(props.todos)\n+            console.log(todo)\n           ))\n         }\n         {\n           // props.todos.map(function(a, i) {\n"
+                },
+                {
+                    "date": 1660898622745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n   return (\n     <div className=\"list-box\">\n       <ul>\n         {\n-          props.todos.map(todo => (\n+          props.todos.map(do => (\n             //<TodoListItem todo={todo} key={todo.id} />\n-            console.log(todo)\n+            console.log(do)\n           ))\n         }\n         {\n           // props.todos.map(function(a, i) {\n"
+                },
+                {
+                    "date": 1660898677303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\n-import TodoListItem from './TodoListItem';\n+//import TodoListItem from './TodoListItem';\n \n function TodoList(props) {\n   return (\n     <div className=\"list-box\">\n"
+                },
+                {
+                    "date": 1660898738098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\n     <div className=\"list-box\">\n       <ul>\n         {\n-          props.todos.map(do => (\n+          props.todos.map((do) => (\n             //<TodoListItem todo={todo} key={todo.id} />\n             console.log(do)\n           ))\n         }\n"
+                },
+                {
+                    "date": 1660898753702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n   return (\n     <div className=\"list-box\">\n       <ul>\n         {\n-          props.todos.map((do) => (\n+          props.todos.map((todo) => (\n             //<TodoListItem todo={todo} key={todo.id} />\n-            console.log(do)\n+            console.log(todo)\n           ))\n         }\n         {\n           // props.todos.map(function(a, i) {\n"
+                },
+                {
+                    "date": 1660898800398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n   return (\n     <div className=\"list-box\">\n       <ul>\n         {\n-          props.todos.map((todo) => (\n+          props.todos.map((to) => (\n             //<TodoListItem todo={todo} key={todo.id} />\n-            console.log(todo)\n+            console.log(to)\n           ))\n         }\n         {\n           // props.todos.map(function(a, i) {\n"
+                },
+                {
+                    "date": 1660898851588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,16 @@\n import React from 'react';\n-//import TodoListItem from './TodoListItem';\n+import TodoListItem from './TodoListItem';\n \n function TodoList(props) {\n   return (\n     <div className=\"list-box\">\n       <ul>\n         {\n-          props.todos.map((to) => (\n-            //<TodoListItem todo={todo} key={todo.id} />\n-            console.log(to)\n+          props.todos.map((todo) => (\n+            <TodoListItem todo={todo} key={todo.id} />\n           ))\n         }\n-        {\n-          // props.todos.map(function(a, i) {\n-          //   return(\n-          //     <TodoListItem todos={props.todos} key={props.todos.id} />\n-          //   )\n-          // })\n-        }\n       </ul>\n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1660899469100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <div className=\"list-box\">\n       <ul>\n         {\n           props.todos.map((todo) => (\n-            <TodoListItem todo={todo} key={todo.id} />\n+            <TodoListItem todos={props.todos} todo={todo} key={todo.id} />\n           ))\n         }\n       </ul>\n     </div>\n"
+                },
+                {
+                    "date": 1660900481844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   return (\n     <div className=\"list-box\">\n       <ul>\n         {\n-          props.todos.map((todo) => (\n-            <TodoListItem todos={props.todos} todo={todo} key={todo.id} />\n+          props.todos.map((todo, i) => (\n+            <TodoListItem todos={props.todos} todo={todo} key={i} />\n           ))\n         }\n       </ul>\n     </div>\n"
+                },
+                {
+                    "date": 1660900513747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <div className=\"list-box\">\n       <ul>\n         {\n           props.todos.map((todo, i) => (\n-            <TodoListItem todos={props.todos} todo={todo} key={i} />\n+            <TodoListItem todos={props.todos} todo={todo} key={i} i={i} />\n           ))\n         }\n       </ul>\n     </div>\n"
+                },
+                {
+                    "date": 1660900555975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <div className=\"list-box\">\n       <ul>\n         {\n           props.todos.map((todo, i) => (\n-            <TodoListItem todos={props.todos} todo={todo} key={i} i={i} />\n+            <TodoListItem todos={props.todos} todo={todo} key={todo.id} i={i} />\n           ))\n         }\n       </ul>\n     </div>\n"
+                },
+                {
+                    "date": 1660900674658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <div className=\"list-box\">\n       <ul>\n         {\n           props.todos.map((todo, i) => (\n-            <TodoListItem todos={props.todos} todo={todo} key={todo.id} i={i} />\n+            <TodoListItem todos={props.todos} setTodos={props.setTodos} todo={todo} key={todo.id} i={i} />\n           ))\n         }\n       </ul>\n     </div>\n"
+                },
+                {
+                    "date": 1660903887175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <div className=\"list-box\">\n       <ul>\n         {\n           props.todos.map((todo, i) => (\n-            <TodoListItem todos={props.todos} setTodos={props.setTodos} todo={todo} key={todo.id} i={i} />\n+            <TodoListItem todos={props.todos} setTodos={props.setTodos} todo={todo} key={i} i={i} />\n           ))\n         }\n       </ul>\n     </div>\n"
+                }
+            ],
+            "date": 1660894477343,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

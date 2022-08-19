@@ -1,0 +1,298 @@
+{
+    "sourceFile": "src/style.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 70,
+            "patches": [
+                {
+                    "date": 1660889093402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1660889154553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+.App{\n+    height: 100vh;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660889170518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n .App{\n+position: relative;\n     height: 100vh;\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660889628154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,10 @@\n .App{\n-position: relative;\n+    position: relative;\n     height: 100vh;\n+    header{\n+        position: sticky;\n+        top: 0;\n+        width: 100%;\n+        \n+    }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660889686242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,10 @@\n     header{\n         position: sticky;\n         top: 0;\n         width: 100%;\n-        \n+        h1{\n+            font-size: 2em;\n+            color: #fff;\n+        }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660889700396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n     header{\n         position: sticky;\n         top: 0;\n         width: 100%;\n+        padding: 1em;\n+        background-color: #000;\n         h1{\n             font-size: 2em;\n             color: #fff;\n         }\n"
+                },
+                {
+                    "date": 1660889711332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     header{\n         position: sticky;\n         top: 0;\n         width: 100%;\n-        padding: 1em;\n+        padding: 0.5em;\n         background-color: #000;\n         h1{\n             font-size: 2em;\n             color: #fff;\n"
+                },
+                {
+                    "date": 1660889748082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,9 @@\n+*{\n+    margin: 0;\n+    padding: 0;\n+    border: none;\n+}\n .App{\n     position: relative;\n     height: 100vh;\n     header{\n"
+                },
+                {
+                    "date": 1660889779869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     header{\n         position: sticky;\n         top: 0;\n         width: 100%;\n-        padding: 0.5em;\n+        padding: 1em;\n         background-color: #000;\n         h1{\n             font-size: 2em;\n             color: #fff;\n"
+                },
+                {
+                    "date": 1660889798068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,8 @@\n         background-color: #000;\n         h1{\n             font-size: 2em;\n             color: #fff;\n+            text-align: center;\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660889817918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n *{\n     margin: 0;\n     padding: 0;\n     border: none;\n+    box-sizing: border-box;\n }\n .App{\n     position: relative;\n     height: 100vh;\n"
+                },
+                {
+                    "date": 1660889850794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,8 @@\n             color: #fff;\n             text-align: center;\n         }\n     }\n+    .input-box{\n+    \n+    }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660889874766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,7 @@\n             text-align: center;\n         }\n     }\n     .input-box{\n-    \n+        display: flex;\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660889886412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,9 @@\n         }\n     }\n     .input-box{\n         display: flex;\n+        input{\n+            width: 100%;\n+        }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660889965797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,9 @@\n     .input-box{\n         display: flex;\n         input{\n             width: 100%;\n+            padding: 0.5em;\n+            font-size: 1em;\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890002482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,6 +25,9 @@\n             width: 100%;\n             padding: 0.5em;\n             font-size: 1em;\n         }\n+        button{\n+            font-size: 1em;\n+        }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890044858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,13 @@\n         input{\n             width: 100%;\n             padding: 0.5em;\n             font-size: 1em;\n+            color: #000;\n         }\n         button{\n+            padding: 0.5em;\n             font-size: 1em;\n+            color: #fff;\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890050907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,7 +30,8 @@\n         button{\n             padding: 0.5em;\n             font-size: 1em;\n             color: #fff;\n+            background-color: #000;\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890077345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n         }\n     }\n     .input-box{\n         display: flex;\n+        margin-top: 2em;\n         input{\n             width: 100%;\n             padding: 0.5em;\n             font-size: 1em;\n"
+                },
+                {
+                    "date": 1660890088401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,7 +32,8 @@\n             padding: 0.5em;\n             font-size: 1em;\n             color: #fff;\n             background-color: #000;\n+            border-radius: 10px;\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890111949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,8 @@\n             font-size: 1em;\n             color: #fff;\n             background-color: #000;\n             border-radius: 10px;\n+            white-space: nowrap;\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890119333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n             padding: 0.5em;\n             font-size: 1em;\n             color: #fff;\n             background-color: #000;\n-            border-radius: 10px;\n+            border-radius: 5px;\n             white-space: nowrap;\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890137549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         }\n     }\n     .input-box{\n         display: flex;\n-        margin-top: 2em;\n+        margin: 2em 0.5em;\n         input{\n             width: 100%;\n             padding: 0.5em;\n             font-size: 1em;\n"
+                },
+                {
+                    "date": 1660890151427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,7 +34,8 @@\n             color: #fff;\n             background-color: #000;\n             border-radius: 5px;\n             white-space: nowrap;\n+            cursor: pointer;\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890203648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,5 +37,8 @@\n             white-space: nowrap;\n             cursor: pointer;\n         }\n     }\n+    .list-box{\n+        margin: 0 0.5em;\n+    }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890491825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,6 +39,11 @@\n         }\n     }\n     .list-box{\n         margin: 0 0.5em;\n+        ul{\n+            li{\n+            \n+            }\n+        }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890716807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n     .list-box{\n         margin: 0 0.5em;\n         ul{\n             li{\n-            \n+                padding: 1em 0.5em;\n             }\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890727139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n         margin: 0 0.5em;\n         ul{\n             li{\n                 padding: 1em 0.5em;\n+                border-bottom: 1px solid #000;\n             }\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890742699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,8 +41,9 @@\n     .list-box{\n         margin: 0 0.5em;\n         ul{\n             li{\n+                display: flex;\n                 padding: 1em 0.5em;\n                 border-bottom: 1px solid #000;\n             }\n         }\n"
+                },
+                {
+                    "date": 1660890767609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,19 @@\n     padding: 0;\n     border: none;\n     box-sizing: border-box;\n }\n+\n+button{\n+    padding: 0.5em;\n+    font-size: 1em;\n+    color: #fff;\n+    background-color: #000;\n+    border-radius: 5px;\n+    white-space: nowrap;\n+    cursor: pointer;\n+}\n+\n .App{\n     position: relative;\n     height: 100vh;\n     header{\n@@ -27,17 +38,8 @@\n             padding: 0.5em;\n             font-size: 1em;\n             color: #000;\n         }\n-        button{\n-            padding: 0.5em;\n-            font-size: 1em;\n-            color: #fff;\n-            background-color: #000;\n-            border-radius: 5px;\n-            white-space: nowrap;\n-            cursor: pointer;\n-        }\n     }\n     .list-box{\n         margin: 0 0.5em;\n         ul{\n"
+                },
+                {
+                    "date": 1660890791143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,11 @@\n             li{\n                 display: flex;\n                 padding: 1em 0.5em;\n                 border-bottom: 1px solid #000;\n+                label{\n+                    width: 100%;\n+                }\n             }\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660890847226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,8 @@\n             color: #000;\n         }\n     }\n     .list-box{\n-        margin: 0 0.5em;\n         ul{\n             li{\n                 display: flex;\n                 padding: 1em 0.5em;\n"
+                },
+                {
+                    "date": 1660890941107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,14 @@\n             li{\n                 display: flex;\n                 padding: 1em 0.5em;\n                 border-bottom: 1px solid #000;\n+                &:first-child{\n+                    border-top: 1px<li>\n+            <label htmlFor=\"check2\"><input type=\"checkbox\" id=\"check2\" />일정2</label>\n+            <button>삭제</button>\n+          </li>;\n+                }\n                 label{\n                     width: 100%;\n                 }\n             }\n"
+                },
+                {
+                    "date": 1660890998377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,12 +46,9 @@\n                 display: flex;\n                 padding: 1em 0.5em;\n                 border-bottom: 1px solid #000;\n                 &:first-child{\n-                    border-top: 1px<li>\n-            <label htmlFor=\"check2\"><input type=\"checkbox\" id=\"check2\" />일정2</label>\n-            <button>삭제</button>\n-          </li>;\n+                    border-top: 1px solid #000;\n                 }\n                 label{\n                     width: 100%;\n                 }\n"
+                },
+                {
+                    "date": 1660891029250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,9 @@\n                     border-top: 1px solid #000;\n                 }\n                 label{\n                     width: 100%;\n+                    font-size: 1em;\n                 }\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1660891052143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,13 @@\n                 &:first-child{\n                     border-top: 1px solid #000;\n                 }\n                 label{\n+                    display: flex;\n+                    align-items: center;\n                     width: 100%;\n                     font-size: 1em;\n+                    color: #000;\n                 }\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1660891078471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,8 +54,11 @@\n                     align-items: center;\n                     width: 100%;\n                     font-size: 1em;\n                     color: #000;\n+                    input{\n+                        margin-right: 0.5em;\n+                    }\n                 }\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1660891095286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,8 +54,9 @@\n                     align-items: center;\n                     width: 100%;\n                     font-size: 1em;\n                     color: #000;\n+                    line-height: 1;\n                     input{\n                         margin-right: 0.5em;\n                     }\n                 }\n"
+                },
+                {
+                    "date": 1660891199811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n     box-sizing: border-box;\n }\n \n button{\n+    display: flex;\n+    justify-content: center;\n+    align-items: center;\n     padding: 0.5em;\n     font-size: 1em;\n     color: #fff;\n     background-color: #000;\n"
+                },
+                {
+                    "date": 1660891211042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,8 @@\n     box-sizing: border-box;\n }\n \n button{\n-    display: flex;\n-    justify-content: center;\n-    align-items: center;\n     padding: 0.5em;\n     font-size: 1em;\n     color: #fff;\n     background-color: #000;\n"
+                },
+                {
+                    "date": 1660892192678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,8 +57,11 @@\n                     color: #000;\n                     line-height: 1;\n                     input{\n                         margin-right: 0.5em;\n+                        &:checked{\n+                            \n+                        }\n                     }\n                 }\n             }\n         }\n"
+                },
+                {
+                    "date": 1660892205459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,21 +48,22 @@\n                 border-bottom: 1px solid #000;\n                 &:first-child{\n                     border-top: 1px solid #000;\n                 }\n+                input{\n+                    margin-right: 0.5em;\n+                    &:checked{\n+                        \n+                    }\n+                }\n                 label{\n                     display: flex;\n                     align-items: center;\n                     width: 100%;\n                     font-size: 1em;\n                     color: #000;\n                     line-height: 1;\n-                    input{\n-                        margin-right: 0.5em;\n-                        &:checked{\n-                            \n-                        }\n-                    }\n+                    \n                 }\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1660892245337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,11 @@\n                 }\n                 input{\n                     margin-right: 0.5em;\n                     &:checked{\n-                        \n+                        label{\n+                            opacity: 0.5;\n+                        }\n                     }\n                 }\n                 label{\n                     display: flex;\n"
+                },
+                {
+                    "date": 1660892257147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,9 +51,9 @@\n                 }\n                 input{\n                     margin-right: 0.5em;\n                     &:checked{\n-                        label{\n+                        + label{\n                             opacity: 0.5;\n                         }\n                     }\n                 }\n"
+                },
+                {
+                    "date": 1660892293021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,8 +53,9 @@\n                     margin-right: 0.5em;\n                     &:checked{\n                         + label{\n                             opacity: 0.5;\n+                            text-decoration: line-through;\n                         }\n                     }\n                 }\n                 label{\n"
+                },
+                {
+                    "date": 1660892364417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,8 +50,11 @@\n                     border-top: 1px solid #000;\n                 }\n                 input{\n                     margin-right: 0.5em;\n+                    width: 1.5em;\n+                    height: 1.5em;\n+                    border: 1px solid #000;\n                     &:checked{\n                         + label{\n                             opacity: 0.5;\n                             text-decoration: line-through;\n"
+                },
+                {
+                    "date": 1660892398855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,8 +43,9 @@\n     .list-box{\n         ul{\n             li{\n                 display: flex;\n+                align-items: center;\n                 padding: 1em 0.5em;\n                 border-bottom: 1px solid #000;\n                 &:first-child{\n                     border-top: 1px solid #000;\n@@ -53,8 +54,9 @@\n                     margin-right: 0.5em;\n                     width: 1.5em;\n                     height: 1.5em;\n                     border: 1px solid #000;\n+                    border-radius: 0;\n                     &:checked{\n                         + label{\n                             opacity: 0.5;\n                             text-decoration: line-through;\n"
+                },
+                {
+                    "date": 1660892425567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,10 +53,8 @@\n                 input{\n                     margin-right: 0.5em;\n                     width: 1.5em;\n                     height: 1.5em;\n-                    border: 1px solid #000;\n-                    border-radius: 0;\n                     &:checked{\n                         + label{\n                             opacity: 0.5;\n                             text-decoration: line-through;\n"
+                },
+                {
+                    "date": 1660893130671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,9 @@\n         ul{\n             li{\n                 display: flex;\n                 align-items: center;\n+                justify-content: space-between;\n                 padding: 1em 0.5em;\n                 border-bottom: 1px solid #000;\n                 &:first-child{\n                     border-top: 1px solid #000;\n@@ -61,10 +62,9 @@\n                         }\n                     }\n                 }\n                 label{\n-                    display: flex;\n-                    align-items: center;\n+                    margin-right: auto;\n                     width: 100%;\n                     font-size: 1em;\n                     color: #000;\n                     line-height: 1;\n"
+                },
+                {
+                    "date": 1660893184395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,10 +67,12 @@\n                     width: 100%;\n                     font-size: 1em;\n                     color: #000;\n                     line-height: 1;\n-                    \n                 }\n+                p{\n+                    margin: 0 0.5em 0 auto;\n+                }\n             }\n         }\n     }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1660893197848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,8 +70,10 @@\n                     line-height: 1;\n                 }\n                 p{\n                     margin: 0 0.5em 0 auto;\n+                    font-size: 1em;\n+                    color: #000;\n                 }\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1660893206264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n *{\n     margin: 0;\n     padding: 0;\n     border: none;\n+    line-height: 1;\n     box-sizing: border-box;\n }\n \n button{\n@@ -66,9 +67,8 @@\n                     margin-right: auto;\n                     width: 100%;\n                     font-size: 1em;\n                     color: #000;\n-                    line-height: 1;\n                 }\n                 p{\n                     margin: 0 0.5em 0 auto;\n                     font-size: 1em;\n"
+                },
+                {
+                    "date": 1660893317088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,10 +70,11 @@\n                     color: #000;\n                 }\n                 p{\n                     margin: 0 0.5em 0 auto;\n-                    font-size: 1em;\n+                    font-size: 0.5em;\n                     color: #000;\n+                    white-space: nowrap;\n                 }\n             }\n         }\n     }\n"
+                },
+                {
+                    "date": 1660893331817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n                     color: #000;\n                 }\n                 p{\n                     margin: 0 0.5em 0 auto;\n-                    font-size: 0.5em;\n+                    font-size: 0.8em;\n                     color: #000;\n                     white-space: nowrap;\n                 }\n             }\n"
+                },
+                {
+                    "date": 1660899166851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,12 +23,13 @@\n         position: sticky;\n         top: 0;\n         width: 100%;\n         padding: 1em;\n-        background-color: #000;\n+        //background-color: #000;\n+        border-bottom: 1px solid #000;\n         h1{\n             font-size: 2em;\n-            color: #fff;\n+            color: #000;\n             text-align: center;\n         }\n     }\n     .input-box{\n"
+                },
+                {
+                    "date": 1660899205228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,10 @@\n             color: #000;\n         }\n     }\n     .list-box{\n+        padding: 1em;\n+        background-color: #fff;\n         ul{\n             li{\n                 display: flex;\n                 align-items: center;\n"
+                },
+                {
+                    "date": 1660899236938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,10 +51,10 @@\n                 align-items: center;\n                 justify-content: space-between;\n                 padding: 1em 0.5em;\n                 border-bottom: 1px solid #000;\n-                &:first-child{\n-                    border-top: 1px solid #000;\n+                &:last-child{\n+                    border: none;\n                 }\n                 input{\n                     margin-right: 0.5em;\n                     width: 1.5em;\n"
+                },
+                {
+                    "date": 1660899273608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,9 @@\n     }\n     .input-box{\n         display: flex;\n         margin: 2em 0.5em;\n+        border-top: 1px solid #000;\n         input{\n             width: 100%;\n             padding: 0.5em;\n             font-size: 1em;\n"
+                },
+                {
+                    "date": 1660899289324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         }\n     }\n     .input-box{\n         display: flex;\n-        margin: 2em 0.5em;\n+        margin: 2em 0;\n         border-top: 1px solid #000;\n         input{\n             width: 100%;\n             padding: 0.5em;\n"
+                },
+                {
+                    "date": 1660899317756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,11 @@\n     }\n     .input-box{\n         display: flex;\n         margin: 2em 0;\n+        padding: 1em;\n         border-top: 1px solid #000;\n+        background-color: rgb(231, 231, 231);\n         input{\n             width: 100%;\n             padding: 0.5em;\n             font-size: 1em;\n"
+                },
+                {
+                    "date": 1660899350835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n             width: 100%;\n             padding: 0.5em;\n             font-size: 1em;\n             color: #000;\n+            background-color: transparent\n         }\n     }\n     .list-box{\n         padding: 1em;\n"
+                },
+                {
+                    "date": 1660899368509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,15 +36,15 @@\n         display: flex;\n         margin: 2em 0;\n         padding: 1em;\n         border-top: 1px solid #000;\n-        background-color: rgb(231, 231, 231);\n+        //background-color: rgb(231, 231, 231);\n         input{\n             width: 100%;\n             padding: 0.5em;\n             font-size: 1em;\n             color: #000;\n-            background-color: transparent\n+            background-color: transparent;\n         }\n     }\n     .list-box{\n         padding: 1em;\n"
+                },
+                {
+                    "date": 1660904594256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,13 @@\n     line-height: 1;\n     box-sizing: border-box;\n }\n \n+body{\n+    min-height: 100vh;\n+    background-color: rgb(230, 230, 230);\n+}\n+\n button{\n     padding: 0.5em;\n     font-size: 1em;\n     color: #fff;\n"
+                },
+                {
+                    "date": 1660904630694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,10 +21,9 @@\n     cursor: pointer;\n }\n \n .App{\n-    position: relative;\n-    height: 100vh;\n+    background-color: #fff;\n     header{\n         position: sticky;\n         top: 0;\n         width: 100%;\n"
+                },
+                {
+                    "date": 1660904642332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n }\n \n .App{\n     background-color: #fff;\n+    border-radius: 2em;\n     header{\n         position: sticky;\n         top: 0;\n         width: 100%;\n"
+                },
+                {
+                    "date": 1660904673818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n     cursor: pointer;\n }\n \n .App{\n+margin: 2em;\n     background-color: #fff;\n     border-radius: 2em;\n     header{\n         position: sticky;\n"
+                },
+                {
+                    "date": 1660904719832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,21 +21,21 @@\n     cursor: pointer;\n }\n \n .App{\n-margin: 2em;\n+    margin: 2em;\n     background-color: #fff;\n     border-radius: 2em;\n+    overflow: hidden;\n     header{\n         position: sticky;\n         top: 0;\n         width: 100%;\n         padding: 1em;\n-        //background-color: #000;\n-        border-bottom: 1px solid #000;\n+        background-color: #000;\n         h1{\n             font-size: 2em;\n-            color: #000;\n+            color: #fff;\n             text-align: center;\n         }\n     }\n     .input-box{\n"
+                },
+                {
+                    "date": 1660904741177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n     header{\n         position: sticky;\n         top: 0;\n         width: 100%;\n-        padding: 1em;\n+        padding: 2em 1em;\n         background-color: #000;\n         h1{\n             font-size: 2em;\n             color: #fff;\n"
+                },
+                {
+                    "date": 1660904773554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,12 +39,10 @@\n         }\n     }\n     .input-box{\n         display: flex;\n-        margin: 2em 0;\n         padding: 1em;\n         border-top: 1px solid #000;\n-        //background-color: rgb(231, 231, 231);\n         input{\n             width: 100%;\n             padding: 0.5em;\n             font-size: 1em;\n"
+                },
+                {
+                    "date": 1660904806872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n             background-color: transparent;\n         }\n     }\n     .list-box{\n-        padding: 1em;\n+        padding: 1em 1.5em;\n         background-color: #fff;\n         ul{\n             li{\n                 display: flex;\n"
+                },
+                {
+                    "date": 1660904817452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         }\n     }\n     .input-box{\n         display: flex;\n-        padding: 1em;\n+        padding: 1em 1.5em;\n         border-top: 1px solid #000;\n         input{\n             width: 100%;\n             padding: 0.5em;\n@@ -50,9 +50,9 @@\n             background-color: transparent;\n         }\n     }\n     .list-box{\n-        padding: 1em 1.5em;\n+        padding: 1em;\n         background-color: #fff;\n         ul{\n             li{\n                 display: flex;\n"
+                }
+            ],
+            "date": 1660889093402,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}
