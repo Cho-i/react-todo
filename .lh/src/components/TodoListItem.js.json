@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 48,
             "patches": [
                 {
                     "date": 1660893980706,
@@ -112,6 +112,94 @@
                 {
                     "date": 1660900767701,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import React from 'react';\n \n function TodoListItem(props) {\n-  \n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n"
+                },
+                {
+                    "date": 1661001548620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n+import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n+  const [checkbox, setCheckbox] = useState(false);\n+\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n"
+                },
+                {
+                    "date": 1661001728553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,11 @@\n   const [checkbox, setCheckbox] = useState(false);\n \n   return (\n     <li>\n-      <input type=\"checkbox\" id={props.todo.id}/>\n+      <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n+        \n+      }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n         let copy = [...props.todos]\n"
+                },
+                {
+                    "date": 1661001891052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n \n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n-        \n+        //setCheckbox(!modal)\n+        console.log(e.target.value)\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661002028075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //setCheckbox(!modal)\n-        console.log(e.target.value)\n+        console.log(props.todo.checked)\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661003059217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,15 @@\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //setCheckbox(!modal)\n-        console.log(props.todo.checked)\n+        console.log(props.todo)\n+\n+        //const copy = [...props.todos]\n+        //copy[0] = '여자코트 추천';\n+       // props.setTodos(copy)\n+\n+\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661003075440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //setCheckbox(!modal)\n         console.log(props.todo)\n \n-        //const copy = [...props.todos]\n+        const copy = [...props.todo]\n         //copy[0] = '여자코트 추천';\n        // props.setTodos(copy)\n \n \n"
+                },
+                {
+                    "date": 1661003107710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,11 +7,12 @@\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //setCheckbox(!modal)\n-        console.log(props.todo)\n+        //console.log(props.todo)\n \n         const copy = [...props.todo]\n+        console.log(copy)\n         //copy[0] = '여자코트 추천';\n        // props.setTodos(copy)\n \n \n"
+                },
+                {
+                    "date": 1661003184618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n-        const copy = [...props.todo]\n+        const copy = [...props.todo.checked]\n         console.log(copy)\n         //copy[0] = '여자코트 추천';\n        // props.setTodos(copy)\n \n"
+                },
+                {
+                    "date": 1661003206499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n         const copy = [...props.todo.checked]\n-        console.log(copy)\n-        //copy[0] = '여자코트 추천';\n-       // props.setTodos(copy)\n+        //console.log(copy)\n+        copy = true\n+        props.setTodos(copy)\n \n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n"
+                },
+                {
+                    "date": 1661003325820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n-        const copy = [...props.todo.checked]\n-        //console.log(copy)\n-        copy = true\n+        const copy = [...props.todo]\n+        console.log(copy)\n+        //copy = true\n         props.setTodos(copy)\n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661003510519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n-        const copy = [...props.todo]\n+        const copy = [...props.todos]\n         console.log(copy)\n         //copy = true\n         props.setTodos(copy)\n \n@@ -19,9 +19,9 @@\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n-        let copy = [...props.todos]\n+        const copy = [...props.todos]\n         copy.splice(props.i,1)\n         props.setTodos(copy)\n       }}>삭제</button>\n     </li>\n"
+                },
+                {
+                    "date": 1661003517752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n         const copy = [...props.todos]\n         console.log(copy)\n         //copy = true\n-        props.setTodos(copy)\n+        //props.setTodos(copy)\n \n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n"
+                },
+                {
+                    "date": 1661003606876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n         const copy = [...props.todos]\n-        console.log(copy)\n+        console.log(copy[props.i])\n         //copy = true\n         //props.setTodos(copy)\n \n \n"
+                },
+                {
+                    "date": 1661003645763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n         const copy = [...props.todos]\n-        console.log(copy[props.i])\n+        console.log(copy[props.i].cheched)\n         //copy = true\n         //props.setTodos(copy)\n \n \n"
+                },
+                {
+                    "date": 1661003787231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n         const copy = [...props.todos]\n-        console.log(copy[props.i].cheched)\n+        console.log(copy[props.i])\n         //copy = true\n         //props.setTodos(copy)\n \n \n"
+                },
+                {
+                    "date": 1661003894937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n         const copy = [...props.todos]\n-        console.log(copy[props.i])\n+        console.log(copy[props.i.checked])\n         //copy = true\n         //props.setTodos(copy)\n \n \n"
+                },
+                {
+                    "date": 1661003925888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n         const copy = [...props.todos]\n-        console.log(copy[props.i.checked])\n+        console.log(copy[props.i].checked)\n         //copy = true\n         //props.setTodos(copy)\n \n \n"
+                },
+                {
+                    "date": 1661003981351,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n         //setCheckbox(!modal)\n         //console.log(props.todo)\n \n         const copy = [...props.todos]\n-        console.log(copy[props.i].checked)\n-        //copy = true\n+        //console.log(copy[props.i].checked)\n+        copy[props.i].checked = true\n         //props.setTodos(copy)\n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661003996648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n         const copy = [...props.todos]\n         //console.log(copy[props.i].checked)\n         copy[props.i].checked = true\n-        //props.setTodos(copy)\n+        props.setTodos(copy)\n \n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n"
+                },
+                {
+                    "date": 1661004067836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         //console.log(props.todo)\n \n         const copy = [...props.todos]\n         //console.log(copy[props.i].checked)\n-        copy[props.i].checked = true\n+        copy[props.i].checked = !props.todo.checked\n         props.setTodos(copy)\n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661004128041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,14 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [checkbox, setCheckbox] = useState(false);\n \n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n-        //setCheckbox(!modal)\n-        //console.log(props.todo)\n \n         const copy = [...props.todos]\n-        //console.log(copy[props.i].checked)\n         copy[props.i].checked = !props.todo.checked\n         props.setTodos(copy)\n \n \n"
+                },
+                {
+                    "date": 1661005602289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,11 @@\n \n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n-\n         const copy = [...props.todos]\n         copy[props.i].checked = !props.todo.checked\n         props.setTodos(copy)\n-\n-\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
                 }
             ],
             "date": 1660893980706,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 73,
+            "activePatchIndex": 75,
             "patches": [
                 {
                     "date": 1660886286919,
@@ -300,6 +300,14 @@
                 {
                     "date": 1660905345991,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n function App() {\n   const [todos, setTodos] = useState(data);\n   return (\n     <div className=\"App\">\n-      <header><h1>Todo List</h1></header>\n       <TodoHeader>Todo List</TodoHeader>\n       <TodoList todos={todos} setTodos={setTodos} />\n       <TodoInsert todos={todos} setTodos={setTodos} />\n     </div>\n"
+                },
+                {
+                    "date": 1661004652422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n function App() {\n   const [todos, setTodos] = useState(data);\n   return (\n     <div className=\"App\">\n-      <TodoHeader>Todo List</TodoHeader>\n+      <TodoHeader todos={todos} setTodos={setTodos}>Todo List</TodoHeader>\n       <TodoList todos={todos} setTodos={setTodos} />\n       <TodoInsert todos={todos} setTodos={setTodos} />\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1661004793262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n function App() {\n   const [todos, setTodos] = useState(data);\n   return (\n     <div className=\"App\">\n-      <TodoHeader todos={todos} setTodos={setTodos}>Todo List</TodoHeader>\n+      <TodoHeader todos={todos}>Todo List</TodoHeader>\n       <TodoList todos={todos} setTodos={setTodos} />\n       <TodoInsert todos={todos} setTodos={setTodos} />\n     </div>\n   );\n"
                 }
             ],
             "date": 1660886286919,

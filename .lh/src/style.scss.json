@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 70,
+            "activePatchIndex": 71,
             "patches": [
                 {
                     "date": 1660889093402,
@@ -288,6 +288,10 @@
                 {
                     "date": 1660904817452,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         }\n     }\n     .input-box{\n         display: flex;\n-        padding: 1em;\n+        padding: 1em 1.5em;\n         border-top: 1px solid #000;\n         input{\n             width: 100%;\n             padding: 0.5em;\n@@ -50,9 +50,9 @@\n             background-color: transparent;\n         }\n     }\n     .list-box{\n-        padding: 1em 1.5em;\n+        padding: 1em;\n         background-color: #fff;\n         ul{\n             li{\n                 display: flex;\n"
+                },
+                {
+                    "date": 1661004527809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,13 +31,18 @@\n         top: 0;\n         width: 100%;\n         padding: 2em 1em;\n         background-color: #000;\n+        color: #fff;\n         h1{\n             font-size: 2em;\n-            color: #fff;\n             text-align: center;\n         }\n+        .count{\n+            margin-top: 1em;\n+            text-align: right;\n+            font-size: 1em;\n+        }\n     }\n     .input-box{\n         display: flex;\n         padding: 1em 1.5em;\n"
                 }
             ],
             "date": 1660889093402,

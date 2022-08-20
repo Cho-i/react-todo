@@ -9,7 +9,7 @@ function App() {
   const [todos, setTodos] = useState(data);
   return (
     <div className="App">
-      <TodoHeader>Todo List</TodoHeader>
+      <TodoHeader todos={todos}>Todo List</TodoHeader>
       <TodoList todos={todos} setTodos={setTodos} />
       <TodoInsert todos={todos} setTodos={setTodos} />
     </div>
