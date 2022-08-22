@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 48,
+            "activePatchIndex": 97,
             "patches": [
                 {
                     "date": 1660893980706,
@@ -200,6 +200,202 @@
                 {
                     "date": 1661005602289,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,14 +5,11 @@\n \n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n-\n         const copy = [...props.todos]\n         copy[props.i].checked = !props.todo.checked\n         props.setTodos(copy)\n-\n-\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661061281211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,14 @@\n \n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n-        const copy = [...props.todos]\n-        copy[props.i].checked = !props.todo.checked\n-        props.setTodos(copy)\n+        // const copy = [...props.todos]\n+        // copy[props.i].checked = !props.todo.checked\n+        // props.setTodos(copy)\n+\n+\n+        \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661061366107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,19 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-\n+  //const [todo, setTodo] = \n+  const [todo, setTodo] = useState(props.todo);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         // const copy = [...props.todos]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n \n-        \n+\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661061382117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,12 @@\n         // const copy = [...props.todos]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n+        console.log(todo)\n \n \n+\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661061441904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  //const [todo, setTodo] = \n   const [todo, setTodo] = useState(props.todo);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n-        // const copy = [...props.todos]\n+        const copy = [...todo]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(todo)\n+        console.log(        const copy = [...todo]\n+)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661061612587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,17 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [todo, setTodo] = useState(props.todo);\n+  const [item, setItem] = useState(props.todo);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n-        const copy = [...todo]\n+        const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(        const copy = [...todo]\n-)\n+        console.log(copy)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661061707531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n   const [item, setItem] = useState(props.todo);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n-        const copy = [...item]\n+        //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(copy)\n+        console.log(item)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661061734507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [item, setItem] = useState(props.todo);\n+  const [items, setItems] = useState(props.todo);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(item)\n+        console.log(items)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661061809025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         console.log(items)\n+        const itemsCopy = [...items]\n+        console.log(itemsCopy)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661061926702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         console.log(items)\n-        const itemsCopy = [...items]\n-        console.log(itemsCopy)\n+        const item= [...items]\n+        console.log(item)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661062075318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         console.log(items)\n-        const item= [...items]\n-        console.log(item)\n+        const copy = [...items]\n+        console.log(copy)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661062084414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(items)\n+        //console.log(items)\n         const copy = [...items]\n         console.log(copy)\n \n \n"
+                },
+                {
+                    "date": 1661062139179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         //console.log(items)\n-        const copy = [...items]\n+        const copy = [...props.todos]\n         console.log(copy)\n \n \n \n"
+                },
+                {
+                    "date": 1661062153062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         //console.log(items)\n-        const copy = [...props.todos]\n+        const copy = [...props.todo]\n         console.log(copy)\n \n \n \n"
+                },
+                {
+                    "date": 1661062182278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [items, setItems] = useState(props.todo);\n+  const [items, setItems] = useState([props.todo]);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         //console.log(items)\n-        const copy = [...props.todo]\n+        const copy = [...items]\n         console.log(copy)\n \n \n \n"
+                },
+                {
+                    "date": 1661062236127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [items, setItems] = useState([props.todo]);\n+  const [items, setItems] = useState(props.todo);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n"
+                },
+                {
+                    "date": 1661062241363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [items, setItems] = useState(props.todo);\n+  const [items, setItems] = useState([props.todo]);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n"
+                },
+                {
+                    "date": 1661062459505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         // props.setTodos(copy)\n \n         //console.log(items)\n         const copy = [...items]\n-        console.log(copy)\n+        console.log(copy.checked)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661062469762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         // props.setTodos(copy)\n \n         //console.log(items)\n         const copy = [...items]\n-        console.log(copy.checked)\n+        console.log(copy[0].checked)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661062668874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import React from 'react';\n \n function TodoListItem(props) {\n   const [items, setItems] = useState([props.todo]);\n+  //const [check, setCheck] = useState(false);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n@@ -11,9 +12,11 @@\n         // props.setTodos(copy)\n \n         //console.log(items)\n         const copy = [...items]\n-        console.log(copy[0].checked)\n+        copy[0].checked = !copy[0].checked\n+        setItems(copy)\n+        //console.log(copy[0].checked)\n \n \n \n       }}/>\n"
+                },
+                {
+                    "date": 1661062963920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [items, setItems] = useState([props.todo]);\n+  const [check, setCheck] = useState([props.todo.check]);\n   //const [check, setCheck] = useState(false);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n@@ -11,11 +11,11 @@\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         //console.log(items)\n-        const copy = [...items]\n-        copy[0].checked = !copy[0].checked\n-        setItems(copy)\n+        const copy = [...check]\n+        //copy[0].checked = !copy[0].checked\n+        setCheck(copy)\n         //console.log(copy[0].checked)\n \n \n \n"
+                },
+                {
+                    "date": 1661062975318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        //console.log(items)\n+        console.log(check)\n         const copy = [...check]\n         //copy[0].checked = !copy[0].checked\n         setCheck(copy)\n         //console.log(copy[0].checked)\n"
+                },
+                {
+                    "date": 1661062987098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [check, setCheck] = useState([props.todo.check]);\n+  const [check, setCheck] = useState(props.todo.check);\n   //const [check, setCheck] = useState(false);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n"
+                },
+                {
+                    "date": 1661063040186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,20 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [check, setCheck] = useState(props.todo.check);\n-  //const [check, setCheck] = useState(false);\n+  const [item, setItem] = useState(props.todo.check);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(check)\n-        const copy = [...check]\n+        console.log(item)\n+        //const copy = [...check]\n         //copy[0].checked = !copy[0].checked\n-        setCheck(copy)\n+        //setCheck(copy)\n         //console.log(copy[0].checked)\n \n \n \n"
+                },
+                {
+                    "date": 1661063045412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(item)\n+        console.log(props.todo.check)\n         //const copy = [...check]\n         //copy[0].checked = !copy[0].checked\n         //setCheck(copy)\n         //console.log(copy[0].checked)\n"
+                },
+                {
+                    "date": 1661063054912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [item, setItem] = useState(props.todo.check);\n+  const [item, setItem] = useState(props.todo.checked);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n"
+                },
+                {
+                    "date": 1661063077064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(props.todo.check)\n+        console.log(props.todo.checked)\n         //const copy = [...check]\n         //copy[0].checked = !copy[0].checked\n         //setCheck(copy)\n         //console.log(copy[0].checked)\n"
+                },
+                {
+                    "date": 1661063108355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(props.todo.checked)\n+        console.log(item)\n         //const copy = [...check]\n         //copy[0].checked = !copy[0].checked\n         //setCheck(copy)\n         //console.log(copy[0].checked)\n"
+                },
+                {
+                    "date": 1661063198675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,12 @@\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        console.log(item)\n-        //const copy = [...check]\n+        //console.log(item)\n+        const copy = [...item]\n         //copy[0].checked = !copy[0].checked\n-        //setCheck(copy)\n+        setCheck(copy)\n         //console.log(copy[0].checked)\n \n \n \n"
+                },
+                {
+                    "date": 1661063286020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         //console.log(item)\n-        const copy = [...item]\n+        const copy = [item]\n         //copy[0].checked = !copy[0].checked\n-        setCheck(copy)\n+        setItem(copy)\n         //console.log(copy[0].checked)\n \n \n \n"
+                },
+                {
+                    "date": 1661063390007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  const [item, setItem] = useState(props.todo.checked);\n+  //const [item, setItem] = useState(props.todo.checked);\n+  const [item, setItem] = useState(false);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n"
+                },
+                {
+                    "date": 1661063412678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,11 +11,11 @@\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         //console.log(item)\n-        const copy = [item]\n+        //const copy = [item]\n         //copy[0].checked = !copy[0].checked\n-        setItem(copy)\n+        setItem(!item)\n         //console.log(copy[0].checked)\n \n \n \n"
+                },
+                {
+                    "date": 1661063819537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import React from 'react';\n \n function TodoListItem(props) {\n   //const [item, setItem] = useState(props.todo.checked);\n-  const [item, setItem] = useState(false);\n+  //const [item, setItem] = useState(false);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n@@ -13,13 +13,16 @@\n \n         //console.log(item)\n         //const copy = [item]\n         //copy[0].checked = !copy[0].checked\n-        setItem(!item)\n+        //setItem(!item)\n         //console.log(copy[0].checked)\n+        const copy = [...props.todos]\n \n+        console.log(copy)\n \n \n+\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661063956180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,28 +1,19 @@\n import { useState } from 'react';\n import React from 'react';\n \n function TodoListItem(props) {\n-  //const [item, setItem] = useState(props.todo.checked);\n-  //const [item, setItem] = useState(false);\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         //const copy = [...item]\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n-        //console.log(item)\n-        //const copy = [item]\n-        //copy[0].checked = !copy[0].checked\n-        //setItem(!item)\n-        //console.log(copy[0].checked)\n         const copy = [...props.todos]\n \n-        console.log(copy)\n+        props.setTodos(copy)\n \n-\n-\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661064030572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n         // props.setTodos(copy)\n \n         const copy = [...props.todos]\n \n+        console.log(props.todo.id)\n+\n         props.setTodos(copy)\n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n"
+                },
+                {
+                    "date": 1661064048588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         // props.setTodos(copy)\n \n         const copy = [...props.todos]\n \n-        console.log(props.todo.id)\n+        console.log(copy[props.todo.id])\n \n         props.setTodos(copy)\n \n       }}/>\n"
+                },
+                {
+                    "date": 1661064089705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,11 @@\n         // copy[props.i].checked = !props.todo.checked\n         // props.setTodos(copy)\n \n         const copy = [...props.todos]\n+        const idx = props.todo.id\n \n-        console.log(copy[props.todo.id])\n+        console.log(copy[idx])\n \n         props.setTodos(copy)\n \n       }}/>\n"
+                },
+                {
+                    "date": 1661064162980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,17 +4,10 @@\n function TodoListItem(props) {\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n-        //const copy = [...item]\n-        // copy[props.i].checked = !props.todo.checked\n-        // props.setTodos(copy)\n-\n         const copy = [...props.todos]\n-        const idx = props.todo.id\n-\n-        console.log(copy[idx])\n-\n+        copy[props.i].checked = !props.todo.checked\n         props.setTodos(copy)\n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n"
+                },
+                {
+                    "date": 1661064200462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n         const copy = [...props.todos]\n         copy.splice(props.i,1)\n+        copy.sort()\n         props.setTodos(copy)\n       }}>삭제</button>\n     </li>\n   );\n"
+                },
+                {
+                    "date": 1661064320932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,11 @@\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n         const copy = [...props.todos]\n         copy.splice(props.i,1)\n-        copy.sort()\n         props.setTodos(copy)\n+\n+        console.log(props.todo.id)\n       }}>삭제</button>\n     </li>\n   );\n }\n"
+                },
+                {
+                    "date": 1661064641634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,18 +7,19 @@\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         const copy = [...props.todos]\n         copy[props.i].checked = !props.todo.checked\n         props.setTodos(copy)\n+//props.todos.filter(todo => todo.checked).length\n \n+        console.log(props.todo.id)\n+\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n         const copy = [...props.todos]\n         copy.splice(props.i,1)\n         props.setTodos(copy)\n-\n-        console.log(props.todo.id)\n       }}>삭제</button>\n     </li>\n   );\n }\n"
+                },
+                {
+                    "date": 1661064728237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n   return (\n     <li>\n       <input type=\"checkbox\" id={props.todo.id} onChange={(e)=>{\n         const copy = [...props.todos]\n-        copy[props.i].checked = !props.todo.checked\n-        props.setTodos(copy)\n-//props.todos.filter(todo => todo.checked).length\n+        //copy[props.i].checked = !props.todo.checked\n+        //props.setTodos(copy)\n+        //copy.filter(item => item.id)\n \n         console.log(props.todo.id)\n \n       }}/>\n"
+                },
+                {
+                    "date": 1661064791394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         //copy[props.i].checked = !props.todo.checked\n         //props.setTodos(copy)\n         //copy.filter(item => item.id)\n \n-        console.log(props.todo.id)\n+        console.log(filter(item => item.id))\n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n"
+                },
+                {
+                    "date": 1661064799455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         //copy[props.i].checked = !props.todo.checked\n         //props.setTodos(copy)\n         //copy.filter(item => item.id)\n \n-        console.log(filter(item => item.id))\n+        console.log(copy.filter(item => item.id))\n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n"
+                },
+                {
+                    "date": 1661064886872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         //copy[props.i].checked = !props.todo.checked\n         //props.setTodos(copy)\n         //copy.filter(item => item.id)\n \n-        console.log(copy.filter(item => item.id))\n+        console.log(copy.filter(item => item.id == props.todo.id))\n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n"
+                },
+                {
+                    "date": 1661064977413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,12 @@\n         //copy[props.i].checked = !props.todo.checked\n         //props.setTodos(copy)\n         //copy.filter(item => item.id)\n \n-        console.log(copy.filter(item => item.id == props.todo.id))\n+        //copy.filter(item => item.id == props.todo.id)\n \n+        console.log(copy.filter(item => item.id == props.todo.id).checked)\n+\n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n       <button onClick={(e)=>{\n"
+                },
+                {
+                    "date": 1661064998381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         //copy.filter(item => item.id)\n \n         //copy.filter(item => item.id == props.todo.id)\n \n-        console.log(copy.filter(item => item.id == props.todo.id).checked)\n+        console.log(copy.filter(item => item.id == props.todo.id))\n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n"
+                },
+                {
+                    "date": 1661065205762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         //copy.filter(item => item.id)\n \n         //copy.filter(item => item.id == props.todo.id)\n \n-        console.log(copy.filter(item => item.id == props.todo.id))\n+        console.log(copy.filter(item => item.id == props.todo.id)[0].checked)\n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n"
+                },
+                {
+                    "date": 1661065353224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,12 @@\n         //copy[props.i].checked = !props.todo.checked\n         //props.setTodos(copy)\n         //copy.filter(item => item.id)\n \n-        //copy.filter(item => item.id == props.todo.id)\n+        copy.filter(item => item.id == props.todo.id)[0].checked = !props.todo.checked\n \n+        props.setTodos(copy)\n+\n         console.log(copy.filter(item => item.id == props.todo.id)[0].checked)\n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n"
+                },
+                {
+                    "date": 1661065465182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n         //copy[props.i].checked = !props.todo.checked\n         //props.setTodos(copy)\n         //copy.filter(item => item.id)\n \n-        copy.filter(item => item.id == props.todo.id)[0].checked = !props.todo.checked\n+        //copy.filter(item => item.id == props.todo.id)[0].checked = !props.todo.checked\n \n-        props.setTodos(copy)\n+        //props.setTodos(copy)\n \n-        console.log(copy.filter(item => item.id == props.todo.id)[0].checked)\n+        //console.log(copy.filter(item => item.id == props.todo.id)[0].checked)\n \n       }}/>\n       <label htmlFor={props.todo.id}>{props.todo.text}</label>\n       <p>{props.todo.date}</p>\n"
                 }
             ],
             "date": 1660893980706,
