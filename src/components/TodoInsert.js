@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import React, { useRef } from 'react';
+import moment from 'moment';
+import 'moment/locale/ko';
 
-function TodoInsert(props) {
+function TodoInsert({todos, setTodos}) {
   const [value, setValue] = useState('');
   const nextId = useRef(4);
   return (
@@ -10,24 +12,20 @@ function TodoInsert(props) {
         setValue(e.target.value)
       }} />
       <button onClick={(e)=>{
-        const today = new Date()
-        const year = today.getFullYear()
-        const month = ('0' + (today.getMonth() + 1)).slice(-2)
-        const day = ('0' + today.getDate()).slice(-2)
-        const dateString = year + '-' + month  + '-' + day
+        const nowDate = moment().format('YYYY-MM-DD');
 
         const todo = {
           id: nextId.current ++,
           text: value,
-          date: dateString,
+          date: nowDate,
           checked: false,
         }
 
-        const copy = [...props.todos]
+        const copy = [...todos]
         copy.push(todo)
 
         function add(){
-          props.setTodos(copy)
+          setTodos(copy)
           setValue('')
         }
 

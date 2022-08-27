@@ -1,13 +1,13 @@
 import React from 'react';
 import TodoListItem from './TodoListItem';
 
-function TodoList(props) {
+function TodoList({todos, setTodos}) {
   return (
     <div className="list-box">
       <ul>
         {
-          props.todos.map((todo, i) => (
-            <TodoListItem todos={props.todos} setTodos={props.setTodos} todo={todo} key={i} i={i} />
+          todos.map((todo, i) => (
+            <TodoListItem todos={todos} setTodos={setTodos} todo={todo} key={i} i={i} />
           ))
         }
       </ul>

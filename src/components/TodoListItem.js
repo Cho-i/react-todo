@@ -1,19 +1,19 @@
 import React from 'react';
 
-function TodoListItem(props) {
+function TodoListItem({todos, setTodos, todo, i}) {
   return (
     <li>
-      <input type="checkbox" checked={props.todo.checked} id={props.todo.id} onChange={(e)=>{
-        const copy = [...props.todos]
-        copy[props.i].checked = e.target.checked
-        props.setTodos(copy)
+      <input type="checkbox" checked={todo.checked} id={todo.id} onChange={(e)=>{
+        const copy = [...todos]
+        copy[i].checked = e.target.checked
+        setTodos(copy)
       }}/>
-      <label htmlFor={props.todo.id}>{props.todo.text}</label>
-      <p>{props.todo.date}</p>
+      <label htmlFor={todo.id}>{todo.text}</label>
+      <p>{todo.date}</p>
       <button onClick={(e)=>{
-        const copy = [...props.todos]
-        copy.splice(props.i,1)
-        props.setTodos(copy)     
+        const copy = [...todos]
+        copy.splice(i,1)
+        setTodos(copy)     
       }}>삭제</button>  
     </li>
   );
